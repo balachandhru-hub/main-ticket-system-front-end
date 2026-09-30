@@ -1,0 +1,43 @@
+.no-tickets-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  border: 2px dashed #c7c7c7;
+  background-color: #fafbfc;
+  border-radius: 12px;
+  color: #555;
+  text-align: center;
+  animation: fadeIn 0.4s ease-in;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.no-tickets-icon {
+  color: #9ca3af;
+  background-color: #f3f4f6;
+  padding: 20px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.no-tickets-container h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.no-tickets-container p {
+  font-size: 14px;
+  color: #666;
+  max-width: 300px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

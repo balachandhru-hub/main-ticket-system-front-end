@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap');
+
+:root {
+  --ab:          #0064D2;
+  --ab-dk:       #0040B0;
+  --ab-lt:       #EAF3FF;
+  --ab-hover:    #F0F7FF;
+  --ab-hdr:      #F5F7FA;
+  --ab-border:   #D3D3D3;
+  --ab-in-bdr:   #ABABAB;
+  --ab-g50:      #F7F7F7;
+  --ab-g100:     #EFEFEF;
+  --ab-g200:     #DEDEDE;
+  --ab-g400:     #ABABAB;
+  --ab-g500:     #8C8C8C;
+  --ab-g600:     #6D6D6D;
+  --ab-g700:     #4D4D4D;
+  --ab-g900:     #1A1A1A;
+  --ab-red:      #BB0000;
+  --ab-red-bg:   #FFF0F0;
+  --ab-green:    #1A6E1A;
+  --ab-grn-bg:   #F0FAF0;
+  --ab-amber:    #7A4500;
+  --ab-amb-bg:   #FEF7EC;
+  --ab-font:     'IBM Plex Sans','Helvetica Neue',Arial,sans-serif;
+  --ab-r:        2px;
+  --ab-h:        28px;
+}
+
+
+/* ── PAGE WRAPPER ─────────────────────────────── */
+.pr-edit-wrapper {
+  font-family: var(--ab-font);
+  font-size: 13px;
+  color: var(--ab-g900);
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 60px;
+}
+
+/* ── STICKY HEADER BAR ────────────────────────── */
+.pr-edit-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  border-bottom: 1px solid var(--ab-border);
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 42px;
+}
+
+.pr-edit-header__title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ab-g900);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pr-edit-header__pr-num {
+  color: var(--ab);
+  font-weight: 600;
+}
+
+/* ── LINE ITEMS GRID (side-by-side cards) ─────── */
+.pr-edit-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 12px 14px;
+  align-items: flex-start;
+}
+
+/* Each line item card */
+.pr-edit-card {
+  flex: 1 1 380px;
+  min-width: 340px;
+  max-width: 520px;
+  background: #fff;
+  border: 1px solid var(--ab-border);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card title bar */
+.pr-edit-card__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  background: var(--ab-hdr);
+  border-bottom: 1px solid var(--ab-border);
+  min-height: 34px;
+  flex-shrink: 0;
+}
+
+.pr-edit-card__title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ab-g900);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: .4px;
+}
+
+/* Status pills on card header */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 7px;
+  border-radius: var(--ab-r);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+}
+
+.pill-new {
+  background: var(--ab-grn-bg);
+  color: var(--ab-green);
+}
+
+.pill-locked {
+  background: var(--ab-amb-bg);
+  color: var(--ab-amber);
+}
+
+/* Scrollable table inside card */
+.pr-edit-card__body {
+  height: 420px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.pr-edit-card__head{
+   height: 70px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* ── FIELD/VALUE TABLE ────────────────────────── */
+.pr-edit-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  table-layout: fixed;
+}
+
+.pr-edit-table thead {
+  background: var(--ab-hdr);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.pr-edit-table th {
+  padding: 6px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ab-g900);
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  border-bottom: 2px solid var(--ab-border);
+  background: var(--ab-hdr);
+  white-space: nowrap;
+}
+
+.pr-edit-table th:first-child { width: 42%; }
+.pr-edit-table th:last-child  { width: 58%; }
+
+.pr-edit-table td {
+  padding: 5px 10px;
+  border-bottom: 1px solid var(--ab-g100);
+  color: var(--ab-g700);
+  font-size: 12px;
+  vertical-align: middle;
+}
+
+.pr-edit-table tbody tr:hover { background: var(--ab-hover); }
+.pr-edit-table tbody tr:last-child td { border-bottom: none; }
+
+.pr-edit-table .field-label {
+  font-weight: 600;
+  color: var(--ab-g700);
+  white-space: nowrap;
+}
+
+/* ── FORM INPUTS inside table ─────────────────── */
+.pr-edit-table input[type="text"],
+.pr-edit-table input[type="date"] {
+  width: 100%;
+  height: var(--ab-h);
+  padding: 0 7px;
+  border: 1px solid var(--ab-in-bdr);
+  border-radius: var(--ab-r);
+  font-size: 12px;
+  font-family: var(--ab-font);
+  color: var(--ab-g900);
+  background: #fff;
+  outline: none;
+  transition: border-color .12s, box-shadow .12s;
+  box-sizing: border-box;
+}
+
+.pr-edit-table input[type="text"]:focus,
+.pr-edit-table input[type="date"]:focus {
+  border-color: var(--ab);
+  box-shadow: 0 0 0 2px rgba(0,100,210,.14);
+}
+
+.pr-edit-table input[type="text"]:disabled,
+.pr-edit-table input[type="date"]:disabled {
+  background: var(--ab-g100);
+  color: var(--ab-g400);
+  cursor: not-allowed;
+  opacity: 1;
+  border-color: var(--ab-g200);
+}
+
+.pr-edit-table input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  accent-color: var(--ab);
+  cursor: pointer;
+  transform: none;
+}
+
+.pr-edit-table input[type="checkbox"]:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+/* ── INVOICE ATTACHMENT ROW ───────────────────── */
+.invoice-attach-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: var(--ab-h);
+  padding: 0 10px;
+  background: var(--ab);
+  color: #fff;
+  border-radius: var(--ab-r);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid var(--ab-dk);
+  font-family: var(--ab-font);
+  transition: background .12s;
+}
+.invoice-attach-label:hover { background: var(--ab-dk); }
+
+.attach-file-list {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.attach-file-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 7px;
+  background: var(--ab-g50);
+  border: 1px solid var(--ab-border);
+  border-radius: var(--ab-r);
+  font-size: 11px;
+}
+
+.attach-file-name {
+  color: var(--ab);
+  text-decoration: underline;
+  cursor: pointer;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.attach-file-remove {
+  background: none;
+  border: none;
+  color: var(--ab-red);
+  cursor: pointer;
+  padding: 1px 3px;
+  font-size: 12px;
+  opacity: .7;
+  transition: opacity .12s;
+}
+.attach-file-remove:hover { opacity: 1; }
+
+/* ── FOOTER ACTION BAR ────────────────────────── */
+.pr-edit-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-top: 1px solid var(--ab-border);
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 500;
+  box-shadow: 0 -2px 5px rgba(0,0,0,.06);
+}
+
+/* ── BUTTONS ──────────────────────────────────── */
+.ab-btn {
+  font-family: var(--ab-font);
+  font-size: 13px;
+  font-weight: 600;
+  height: 30px;
+  padding: 0 14px;
+  border-radius: var(--ab-r);
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  white-space: nowrap;
+  transition: background .12s, border-color .12s;
+}
+.ab-btn:disabled { opacity: .5; cursor: not-allowed; }
+
+.ab-btn-primary {
+  background: var(--ab);
+  color: #fff;
+  border-color: var(--ab-dk);
+}
+.ab-btn-primary:hover:not(:disabled) { background: var(--ab-dk); }
+
+.ab-btn-outline {
+  background: #fff;
+  color: var(--ab);
+  border-color: var(--ab-border);
+}
+.ab-btn-outline:hover:not(:disabled) { background: var(--ab-lt); border-color: var(--ab); }
+
+.ab-btn-ghost {
+  background: #fff;
+  color: var(--ab-red);
+  border-color: var(--ab-border);
+}
+.ab-btn-ghost:hover { background: var(--ab-red-bg); border-color: var(--ab-red); }
+
+/* ── EMPTY / ERROR STATES ─────────────────────── */
+.pr-edit-empty {
+  padding: 24px;
+  text-align: center;
+  color: var(--ab-g500);
+  font-size: 12px;
+  font-style: italic;
+}
+
+/* ── RESPONSIVE ───────────────────────────────── */
+@media (max-width: 900px) {
+  .pr-edit-cards { flex-direction: column; }
+  .pr-edit-card { max-width: 100%; }
+}
+@media (max-width: 600px) {
+  .pr-edit-footer {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    padding: 8px !important;
+    gap: 6px !important;
+  }
+  .pr-edit-footer .ab-btn {
+    width: 100% !important;
+    font-size: 11px !important;
+    padding: 0 4px !important;
+    height: 36px !important;
+  }
+  .pr-edit-wrapper {
+    padding-bottom: 70px;
+  }
+}
+@media (max-width: 480px) {
+  .pr-edit-card {
+    min-width: 100% !important;
+  }
+}

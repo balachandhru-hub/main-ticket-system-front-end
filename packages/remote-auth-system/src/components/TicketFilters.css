@@ -1,0 +1,330 @@
+.filter-wrapper {
+  background-color: #fff;
+  padding: 0.9rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  height: max-content;
+  gap: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: fit-content;
+}
+
+.filter-title {
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.5em 0.5em;
+  color: #333;
+}
+
+.filter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.filter-controls > * {
+  flex: 1 1 14em;
+  min-width: 14em;
+}
+
+.search-view {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 0.1em 0.9em;
+  border-radius: 0.5em;
+  border: 1px solid #ccc;
+  height: 100%;
+}
+
+.search-view input {
+  border: none;
+  outline: none;
+  padding: 4px;
+  font-size: 14px;
+  margin-left: 6px;
+}
+
+select {
+  padding: 0.7rem 0.8rem;
+  border-radius: 0.5em;
+  border: 1px solid #ccc;
+  font-size: 0.8em;
+  background-color: #fff;
+  color: #333;
+  width: 100%;
+}
+
+.date-range-group {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.date-range-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.date-label {
+  font-size: 14px;
+  color: #333;
+  white-space: nowrap;
+}
+
+.custom-datepicker {
+  padding: 0.7rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5em;
+  font-size: 14px;
+  background-color: #fff;
+  width: 100%;
+}
+
+.filter-box {
+  flex: 1 1 10em;
+  min-width: fit-content;
+  max-width: 100%;
+  box-sizing: border-box;
+  height: auto;
+}
+
+@media (max-width: 480px) {
+  .filter-box {
+    margin-bottom: 1.2rem;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    overflow-y: auto;
+  }
+
+  .dashboard-content {
+    overflow-y: auto;
+  }
+
+  .filter-wrapper {
+    max-height: none;
+    overflow: visible;
+  }
+}
+
+
+.filter-box label {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
+.search-input {
+  background-color: transparent;
+  border: none !important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color:grey;
+}
+
+ .filter-box select,
+.react-datepicker__input-container input {
+  padding: 0.7rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5em;
+  font-size: 0.8em;
+
+  
+  width: 100%;
+  box-sizing: border-box;
+  content: fit;
+}
+
+/* Responsive widths for filter-box select */
+@media (max-width: 1024px) {
+  .filter-box select {
+    width:9.5rem;
+    padding: 0.7rem 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5em;
+    font-size: 0.8em;
+    background-color: #fff;
+    color: #333;
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-box select {
+    width: 29rem;
+    padding: 0.75rem 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5em;
+    font-size: 0.85em;
+    background-color: #fff;
+    color: #333;
+  }
+}
+
+@media (max-width: 704px) {
+  .filter-box select {
+    width: 21rem;
+    padding: 0.75rem 0.8rem;
+    border: 1.2px solid #999;
+    border-radius: 0.5em;
+    font-size: 0.85em;
+    background-color: #fff;
+    color: #333;
+  }
+}
+@media (max-width: 535px) {
+  .filter-box select {
+    width: 18rem;
+    padding: 0.75rem 0.8rem;
+    border: 1.2px solid #999;
+    border-radius: 0.5em;
+    font-size: 0.85em;
+    background-color: #fff;
+    color: #333;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-box select {
+    width: 14rem;
+    padding: 0.8rem 0.75rem;
+    border: 1.2px solid #666;
+    border-radius: 0.5em;
+    font-size: 0.9em;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .filter-box select option {
+    padding: 0.6rem 0.75rem;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.5;
+  }
+
+  .filter-box select option:checked {
+    background-color: #1f2937;
+    color: white;
+  }
+}
+
+@media (max-width: 390px) {
+  .filter-box select {
+    width: 12rem;
+    padding: 0.8rem 0.7rem;
+    border: 1.5px solid #333;
+    border-radius: 0.5em;
+    font-size: 0.85em;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+  }
+
+  .filter-box select option {
+    padding: 0.6rem 0.7rem;
+    background-color: #fff;
+    color: #333;
+    font-size: 0.85em;
+  }
+
+  .filter-box select option:checked {
+    background-color: #1f2937;
+    color: white;
+  }
+}
+
+@media (max-width: 350px) {
+  .filter-box select {
+    width:10.5rem;
+    padding: 0.75rem 0.65rem;
+    border: 1.5px solid #333;
+    border-radius: 0.5em;
+    font-size: 0.8em;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+  }
+
+  .filter-box select option {
+    padding: 0.5rem 0.65rem;
+    background-color: #fff;
+    color: #333;
+    font-size: 0.8em;
+    line-height: 1.4;
+  }
+
+  .filter-box select option:checked {
+    background-color: #1f2937;
+    color: white;
+  }
+}  
+
+
+
+@media (max-width: 768px) {
+  .filter-controls {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .filter-controls > * {
+    flex: 1 1 100% !important;
+    min-width: 100% !important;
+  }
+
+  .filter-box {
+    width: 100% !important;
+  }
+
+  .filter-box label {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .date-label {
+    margin-bottom: 0.3em;
+  }
+}
+
+
+
+@media (max-width: 704px) {
+  .filter-controls {
+    flex-direction: column;
+    flex-wrap: nowrap; 
+  }
+
+  .filter-controls > * {
+    flex: 1 1 100% !important;
+    min-width: 100% !important;
+  }
+
+  .filter-box {
+    width: 100% !important;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .filter-wrapper {
+    padding: 0.9rem 0.9rem 2.5rem;
+  }
+}

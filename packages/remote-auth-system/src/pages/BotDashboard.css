@@ -1,0 +1,435 @@
+.bots-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100%;
+  box-sizing: border-box;
+  padding:1.5rem;
+}
+ 
+.bots-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+ 
+.bots-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  
+}
+ 
+.bot-card {
+  background-color: #ffffff;
+  border: 1px solid #e1e5e9;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 10rem;
+  width: 17.5rem;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+ 
+.bot-card.active {
+  opacity: 1;
+}
+ 
+.bot-card.inactive {
+  opacity: 1;
+  cursor: default;
+}
+ 
+.inactive-indicator {
+  display: none;
+}
+ 
+.bot-card.active:hover {
+  transform: translateY(-0.125rem);
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.12);
+}
+ 
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+ 
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  padding: 0;
+  line-height: 1.3;
+  max-width: 12rem;
+}
+ 
+.card-description {
+  font-size: 0.8125rem;
+  color: #666666;
+  padding: 0;
+  line-height: 1.4;
+  max-width: 12rem;
+}
+ 
+.open-button {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.875rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  transition: all 0.2s ease-in-out;
+  color: #ffffff;
+  position: absolute;
+  bottom: 1rem;
+  right: 1.5rem;
+  min-width: 4.5rem;
+}
+ 
+.open-button.enabled {
+  background-color: #1976d2;
+  cursor: pointer;
+}
+ 
+.open-button.enabled:hover {
+  background-color: #1565c0;
+}
+ 
+.open-button.disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+ 
+.arrow-icon {
+  width: 1rem;
+  height: 1rem;
+  stroke: currentColor;
+}
+ 
+.bots-unauthorized {
+  text-align: center;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  border: 1px solid #e1e5e9;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.08);
+}
+ 
+.bots-unauthorized h2 {
+  font-size: 1.5rem;
+  color: #d32f2f;
+  padding-bottom: 1rem;
+}
+ 
+.bots-unauthorized p {
+  font-size: 1rem;
+  color: #666666;
+}
+ 
+ 
+ 
+/* Loading State */
+.bots-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: 20px;
+}
+ 
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #1976d2;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+ 
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+ 
+.bots-loading p {
+  font-size: 16px;
+  color: #666666;
+}
+ 
+/* Error State */
+.bots-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  padding: 40px;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  border: 1px solid #e1e5e9;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.08);
+}
+ 
+.bots-error h2 {
+  color: #d32f2f;
+  margin-bottom: 16px;
+  font-size: 24px;
+}
+ 
+.bots-error p {
+  color: #666666;
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+ 
+.retry-button {
+  padding: 12px 24px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+ 
+.retry-button:hover {
+  background-color: #1565c0;
+}
+ 
+/* Empty State */
+.bots-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  padding: 40px;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  border: 1px solid #e1e5e9;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.08);
+}
+ 
+.bots-empty h2 {
+  color: #1a1a1a;
+  margin-bottom: 16px;
+  font-size: 24px;
+}
+ 
+.bots-empty p {
+  color: #666666;
+  font-size: 16px;
+}
+ 
+@media (max-width: 768px) {
+  .bots-container {
+    gap: 1.5rem;
+  }
+ 
+  .bots-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+ 
+  .bot-card {
+    padding: 1.25rem;
+    height: 8.75rem;
+    width: 100%;
+  }
+ 
+  .card-title {
+    font-size: 0.9375rem;
+    max-width: 10rem;
+  }
+ 
+  .card-description {
+    font-size: 0.75rem;
+    max-width: 10rem;
+  }
+ 
+  .open-button {
+    padding: 0.4375rem 0.75rem;
+    font-size: 0.8125rem;
+    min-width: 4rem;
+    bottom: 1.25rem;
+    right: 1.25rem;
+  }
+ 
+  .bots-loading,
+  .bots-error,
+  .bots-empty {
+    min-height: 300px;
+    padding: 30px 20px;
+  }
+ 
+  .bots-error h2,
+  .bots-empty h2 {
+    font-size: 20px;
+  }
+ 
+  .bots-error p,
+  .bots-empty p {
+    font-size: 14px;
+  }
+ 
+  .retry-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+ 
+  .spinner {
+    width: 40px;
+    height: 40px;
+  }
+}
+ 
+@media (max-width: 1200px) {
+  .bots-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+ 
+ 
+@media (max-width: 480px) {
+  .bots-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+ 
+  .bot-card {
+    padding: 1rem;
+    height: 8rem;
+    width: 100%;
+  }
+ 
+  .card-title {
+    font-size: 0.875rem;
+    max-width: 90%;
+  }
+ 
+  .card-description {
+    font-size: 0.6875rem;
+    max-width: 90%;
+  }
+ 
+  .open-button {
+    font-size: 0.75rem;
+    padding: 0.375rem 0.625rem;
+    min-width: 3.5rem;
+    bottom: 1rem;
+    right: 1rem;
+  }
+ 
+  .arrow-icon {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+ 
+  .bots-unauthorized h2 {
+    font-size: 1.3rem;
+  }
+ 
+  .bots-unauthorized p {
+    font-size: 0.9rem;
+  }
+}
+ 
+/* ────────────────────────────────
+   NEW: Simply PR Popup Modal Styles
+   (Only added — nothing removed!)
+   ──────────────────────────────── */
+.spr-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 1rem;
+}
+ 
+.spr-modal {
+  background: white;
+  border-radius: 18px;
+  width: 440px;
+  max-width: 92vw;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.22);
+  position: relative;
+  overflow: hidden;
+}
+ 
+.spr-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: #aaa;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+ 
+.spr-modal-close:hover {
+  background: #f0f0f0;
+  color: #333;
+}
+ 
+.spr-btn {
+  padding: 16px 32px;
+  border-radius: 14px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  min-width: 160px;
+  transition: all 0.25s ease;
+}
+ 
+.spr-btn-service {
+  background: #1976d2;
+  color: white;
+  box-shadow: 0 8px 20px rgba(25, 118, 210, 0.3);
+}
+ 
+.spr-btn-service:hover {
+  background: #1565c0;
+  transform: translateY(-3px);
+}
+ 
+.spr-btn-materials {
+  background:#1565c0;
+  color: white;
+  border: 2px solid #e2e8f0;
+}
+ 
+.spr-btn-materials:hover {
+  background: #e2e8f0;
+  transform: translateY(-3px);
+}
+ 

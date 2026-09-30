@@ -1,0 +1,714 @@
+
+
+.simplypr-container {
+  background-color: #fff;
+  border-radius: 0.5rem; 
+  padding: 1.75rem 2rem; 
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #222;
+}
+
+
+.simplypr-header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.simplypr-header-buttons {
+  display: flex;
+  gap: 0.5rem; 
+}
+
+.simplypr-btn-primary {
+  background-color: #0b6df0;
+  color: #fff;
+  border: 0.063rem solid rgba(11,109,240,0.15); 
+  border-radius: 0.375rem; 
+  padding: 0.5rem 0.875rem; 
+  cursor: pointer;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.simplypr-btn-primary:hover {
+  background-color: #095fda;
+}
+
+.simplypr-btn-outline {
+  background: #fff;
+  border: 0rem solid #cfd8e6;
+  border-radius: 0.375rem; 
+  padding: 0.5rem 0.75rem; 
+  cursor: pointer;
+}
+
+.simplypr-btn-outline:hover {
+  background: #fbfdff;
+}
+
+
+.simplypr-stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 3.125rem 0 1.625rem; 
+  position: relative;
+  padding: 0 0.75rem; 
+}
+
+.simplypr-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  color: #98a0ab;
+  font-size: 0.8125rem; 
+}
+
+.simplypr-step-number {
+  background: #e6edf9;
+  color: #0b6df0;
+  border-radius: 50%;
+  width: 0.625rem; 
+  height: 1.3125rem; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.375rem; 
+  font-weight: 700;
+}
+
+.simplypr-step.active .simplypr-step-number {
+  background: #0b6df0;
+  color: #fff;
+}
+
+.simplypr-step.active {
+  color: #0b6df0;
+  font-weight: 700;
+}
+
+.simplypr-stepper::before {
+  content: "";
+  position: absolute;
+  left: 2.75rem;
+  right: 2.75rem; 
+  top: 0.875rem; 
+  height: 0.125rem; 
+  background-color: #e6ebf3;
+  z-index: 0;
+  border-radius: 0.125rem; 
+}
+
+.simplypr-stepper .simplypr-step {
+  position: relative;
+  z-index: 2;
+}
+
+.simplypr-stepper .simplypr-step:not(:last-child) {
+  margin-right: 0.5rem; 
+}
+
+
+.simplypr-section-view {
+  margin-top: 2.5rem; 
+}
+
+.simplypr-section-title {
+  background: white;
+  border: 0.09375rem solid #004aad; 
+  color: #004aad;
+  font-weight: 700;
+  padding: 0.5rem 0.75rem; 
+  border-radius: 0.375rem; 
+  cursor: default;
+}
+
+.simplypr-form-row {
+  display: flex;
+  gap: 1.125rem; 
+  margin-top: 0.875rem; 
+  margin-bottom: 3.4375rem; 
+  border: 0.0625rem solid #e9edf5; 
+  padding: 1.5625rem; 
+  border-radius: 0.5rem; 
+  background-color: #ffffff;
+  box-shadow: 0 0.25rem 0.625rem rgba(16, 24, 40, 0.04); 
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.simplypr-form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 9.375rem; 
+  min-width: 8.75rem; 
+}
+
+.simplypr-form-group label {
+  color: #5a6673;
+  font-size: 0.75rem; 
+  margin-bottom: 0.375rem; 
+}
+
+.simplypr-form-group input,
+.simplypr-form-group select,
+.simplypr-form-group textarea {
+  border: 0.0625rem solid #d7dfe9; 
+  border-radius: 0.375rem; 
+  padding: 0.5rem 0.625rem; 
+  font-size: 0.8125rem;
+  background: #fff;
+}
+
+.simplypr-form-group input::placeholder,
+.simplypr-form-group textarea::placeholder {
+  color: #a9b3bf;
+}
+
+.simplypr-form-group input:focus,
+.simplypr-form-group select:focus,
+.simplypr-form-group textarea:focus {
+  outline: none;
+  border-color: #0b6df0;
+  box-shadow: 0 0.375rem 1.125rem rgba(11,109,240,0.08); 
+}
+
+.simplypr-update-btn {
+  background-color: #0b6df0;
+  color: #fff;
+  border: none;
+  border-radius: 0.375rem; 
+  padding: 0.5rem 0.75rem; 
+  cursor: pointer;
+  font-size: 0.8125rem; 
+  margin-left: auto;
+}
+
+.simplypr-update-btn:hover {
+  background-color: #095fda;
+}
+
+
+.simplypr-header-box {
+  margin-top: 1.125rem; 
+  border: 0.0625rem solid #eef3fb; 
+  border-radius: 0.375rem;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.75rem; 
+  align-items: center;
+}
+
+.simplypr-header-box button {
+  padding: 0.375rem 0.75rem; 
+  border-radius: 0.375rem; 
+  cursor: pointer;
+  font-weight: 600;
+}
+
+
+.simplypr-header-table {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fafbfd;
+  border: 0.0625rem solid #e9eef9; 
+  border-radius: 0.375rem; 
+  padding: 0.625rem 0.875rem; 
+  font-size: 0.8125rem; 
+  color: #344056;
+  font-weight: 600;
+  margin-bottom: 0.625rem; 
+  box-shadow: 0 0.5rem 1.375rem rgba(16, 24, 40, 0.06); 
+}
+
+
+.simplypr-header-column {
+  flex: 1;
+  text-align: left;
+  color: #55606b;
+  font-size: 0.8125rem;
+}
+
+.simplypr-header-column:not(:last-child) {
+  padding-right: 0.75rem; 
+}
+
+
+.simplypr-table-header-row {
+  width: 100%;
+  display: flex;
+  gap: 0.75rem; 
+  align-items: center;
+  background: #f3f5f8;
+  border: 0.0625rem solid #e6ebf3; 
+  padding: 0.625rem 0.75rem; 
+  border-radius: 0.375rem; 
+  margin-bottom: 0.75rem; 
+  color: #6b7785;
+  font-weight: 600;
+}
+
+.simplypr-table-header-row .simplypr-table-cell {
+  flex: 1;
+  padding: 0.375rem 0.5rem; 
+  font-size: 0.8125rem; 
+}
+
+
+.simplypr-panel {
+  width: 100%;
+  padding: 0.875rem; 
+  border-radius: 0.375rem; 
+  background: #ffffff;
+  border: 0.0625rem solid #eef4fb;
+  box-shadow: inset 0 -0.0625rem 0 rgba(16,24,40,0.02); 
+}
+
+.simplypr-panel:hover {
+  box-shadow: 0 0.625rem 1.75rem rgba(16,24,40,0.06); 
+}
+
+
+.simplypr-table-header-row {
+  background: #efefef;
+  color: #4b5563;
+  border: 0.0625rem solid #e2e6e9; 
+  border-bottom: 0.125rem solid #d1d6da; 
+}
+
+.simplypr-table-header-row .simplypr-table-cell {
+  padding: 0.625rem 0.75rem;
+  font-size: 0.8125rem;
+  color: #55606b;
+}
+
+
+.simplypr-panel .simplypr-table-row {
+  display: flex;
+  gap: 0.75rem; 
+  align-items: center;
+  padding: 0.75rem 0.625rem; 
+  border-bottom: 0.0625rem solid #eef2f5; 
+  background: #ffffff;
+}
+
+.simplypr-panel .simplypr-table-row:nth-child(even) {
+  background: #fcfdfe;
+}
+
+.simplypr-panel .simplypr-table-row .simplypr-table-cell {
+  flex: 1;
+  padding: 0.375rem 0.5rem; 
+  font-size: 0.8125rem; 
+  color: #344056;
+}
+
+
+.simplypr-section-label {
+  display: inline-block;
+  background: #f6fbff;
+  color: #0b6df0;
+  border: 0.0625rem solid #dfeafc; 
+  padding: 0.375rem 0.625rem; 
+  border-radius: 0.375rem; 
+  font-weight: 600;
+  margin-bottom: 0.625rem; 
+}
+
+
+.muted {
+  color: #8f99a6;
+  font-weight: 500;
+}
+
+.small-btn {
+  padding: 0.375rem 0.625rem; 
+  border-radius: 0.375rem;
+  font-size: 0.75rem; 
+  border: 0.0625rem solid #cfd8e6; 
+  background: #fff;
+  color: #21323a;
+}
+
+@media (max-width: 56.25rem) {
+  .simplypr-form-row { padding: 0.875rem; } 
+  .simplypr-form-group { min-width: 7.5rem; } 
+  .simplypr-step-number { width: 1.5rem; height: 1.5rem; } 
+}
+
+
+.simplypr-header-box {
+  background: #fff;
+  border: 0.0625rem solid #e5e5e5;
+  border-radius: 0.375rem; 
+  box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.08); 
+  overflow: hidden;
+  margin-top: 0.9375rem; 
+  width: 100%;
+}
+
+
+.simplypr-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem; 
+  color: #333;
+}
+
+.simplypr-table thead {
+  background-color: #f8f9fb;
+  border-bottom: 0.0625rem solid #e5e5e5; 
+}
+
+.simplypr-table th {
+  text-align: center;
+  padding: 0.625rem 0.75rem; 
+  font-weight: 600;
+  color:gray;
+  font-size: 0.8125rem;
+  border: .0625rem solid #ccc;
+}
+
+.simplypr-table td {
+  padding: 0.625rem 0.75rem; 
+  border: 0.0625rem solid #ccc; 
+}
+
+
+.simplypr-table input,
+.simplypr-table select {
+  width: 100%;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.25rem; 
+  padding: 0.375rem 0.5rem; 
+  font-size: 0.8125rem;
+  background: #fff;
+  color: gray;
+}
+
+.simplypr-table input:focus,
+.simplypr-table select:focus {
+  outline: none;
+  border-color: #004aad;
+  box-shadow: 0 0 0.1875rem rgba(0, 74, 173, 0.3); 
+}
+
+.simplypr-update-btn {
+  background-color: #004aad;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem; 
+  padding: 0.375rem 0.625rem; 
+  cursor: pointer;
+  font-size: 0.8125rem;
+  width: 100%;
+}
+
+.simplypr-update-btn:hover {
+  background-color: #003b80;
+}
+
+.simplypr-icon {
+  margin-right: 0.125rem; 
+  font-size: 1rem; 
+  vertical-align: middle;
+  color: #004aad;
+}
+
+
+.simplypr-header-bar {
+  padding: 0.75rem 1rem; 
+  background: #fff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.simplypr-title {
+  font-size: 1.125rem; 
+  font-weight: 600;
+  color: #333;
+}
+
+
+.simplypr-header-buttons {
+  display: flex;
+  gap: 0.5rem; 
+}
+
+
+.simplypr-btn-outline {
+  background: #fff;
+  border: 0rem solid #ccc;
+  color: blue;
+  border-radius: 0.25rem; 
+  padding: 0.375rem 1rem; 
+  cursor: pointer;
+  font-size: 0.8125rem;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem; 
+}
+
+.simplypr-btn-outline:hover {
+  background: #f5f5f5;
+}
+
+.simplypr-btn-primary {
+  background-color: #004aad;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem; 
+  padding: 0.375rem 1rem; 
+  cursor: pointer;
+  font-size: 0.8125rem;
+}
+
+.simplypr-btn-primary:hover {
+  background-color: #003b80;
+}
+
+
+.simplypr-icon {
+  font-size: 1rem; 
+  color: #004aad;
+}
+
+
+.simplypr-border-line {
+  height: 0.0625rem; 
+  background: #e0e0e0;
+  width: 100%;
+}
+
+
+.simplypr-header-bar {
+  padding: 0.03125rem 0.03125rem; 
+}
+
+
+.simplypr-footer-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem; 
+  margin-top: 0.625rem; 
+  margin-bottom: 0.5rem; 
+}
+
+.simplypr-btn-primary {
+  color: #fff;
+  border: none;
+  padding: 0.375rem 0.875rem; 
+  border-radius: 0.375rem; 
+  cursor: pointer;
+}
+
+.simplypr-icon {
+  font-size: 1.125rem; 
+  color: #004aad;
+}
+
+.simplypr-footer-buttons-bottom {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.625rem; 
+  margin: 1.875rem 0 2.8125rem; 
+  padding-right: 34rem; 
+}
+
+.simplypr-btn-cancel {
+  background-color: #fff;
+  color: #004aad;
+  border: 0.09375rem solid #004aad; 
+  border-radius: 0.25rem; 
+  padding: 0.375rem 1rem; 
+  cursor: pointer;
+  font-size: 0.8125rem;
+  transition: all 0.2s ease;
+}
+
+.simplypr-btn-cancel:hover {
+  background-color: #f2f6ff;
+  border-color: #003b80;
+  color: #003b80;
+}
+
+.simplypr-step {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem; 
+  font-size: 0.875rem; 
+  color: #333;
+}
+
+.simplypr-step-number {
+  position: relative;
+  width: 1.125rem; 
+  height: 1.125rem; 
+  border: 0.125rem solid gray;  
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.simplypr-step-number::after {
+  content: "";
+  width: 0.375rem;
+  height: 0.375rem; 
+  border-radius: 50%;
+  background-color: gray;
+}
+
+.simplypr-step.active .simplypr-step-number {
+  border-color: #0056b3;
+}
+
+.simplypr-step-line {
+  height: 0.09375rem; 
+  background-color: #ccc;
+}
+
+
+
+
+.simplypr-stepper {
+  --side-padding: 2.75rem;    
+  --circle-size: 1.375rem;    
+  --track-height: 0.25rem;    
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.75rem var(--side-padding); 
+  box-sizing: border-box;
+  gap: 0;
+  width: 100%;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+
+.simplypr-stepper::before {
+  content: "";
+  position: absolute;
+  left: calc(var(--side-padding) + (var(--circle-size) / 2));
+  right: calc(var(--side-padding) + (var(--circle-size) / 2));
+  top: 50%;
+  transform: translateY(-50%);
+  height: var(--track-height);
+  background: #e6ebf3;
+  border-radius: 0.25rem; 
+  z-index: 1;
+}
+
+
+.simplypr-stepper::after {
+  content: "";
+  position: absolute;
+  left: calc(var(--side-padding) + (var(--circle-size) / 2));
+  top: 50%;
+  transform: translateY(-50%);
+  height: var(--track-height);
+  background: #0b6df0;
+  border-radius: 0.25rem; 
+  z-index: 2;
+  width: 0%;
+  transition: width 280ms cubic-bezier(.2,.9,.2,1);
+}
+
+
+.simplypr-stepper[data-active="1"]::after { width: 0%; }
+.simplypr-stepper[data-active="2"]::after { width: 50%; }
+.simplypr-stepper[data-active="3"]::after { width: 100%; }
+
+
+.simplypr-step.active .simplypr-step-number,
+.simplypr-step.active .simplypr-step-label {
+  color: #0b6df0;
+}
+
+
+.simplypr-step {
+  position: relative;
+  z-index: 3; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1 1 0;     
+  gap: 0.5rem;
+  color: #98a0ab;
+  font-size: 0.8125rem; 
+}
+
+
+.simplypr-step-number {
+  width: var(--circle-size);
+  height: var(--circle-size);
+  border-radius: 50%;
+  background: #ffffff;
+  border: 0.125rem solid #cfd6de; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+
+.simplypr-step-number::after {
+  content: "";
+  width: 0.375rem; 
+  height: 0.375rem; 
+  border-radius: 50%;
+  background: #aab3bd;
+  display: block;
+}
+
+.simplypr-stepper[data-active="1"] .simplypr-step:nth-child(1) .simplypr-step-number,
+.simplypr-stepper[data-active="2"] .simplypr-step:nth-child(1) .simplypr-step-number,
+.simplypr-stepper[data-active="2"] .simplypr-step:nth-child(3) .simplypr-step-number,
+.simplypr-stepper[data-active="3"] .simplypr-step:nth-child(1) .simplypr-step-number,
+.simplypr-stepper[data-active="3"] .simplypr-step:nth-child(3) .simplypr-step-number,
+.simplypr-stepper[data-active="3"] .simplypr-step:nth-child(5) .simplypr-step-number {
+  background: #0b6df0;
+  border-color: #0b6df0;
+}
+
+.simplypr-stepper[data-active="1"] .simplypr-step:nth-child(1) .simplypr-step-number::after,
+.simplypr-stepper[data-active="2"] .simplypr-step:nth-child(1) .simplypr-step-number::after,
+.simplypr-stepper[data-active="2"] .simplypr-step:nth-child(3) .simplypr-step-number::after,
+.simplypr-stepper[data-active="3"] .simplypr-step:nth-child(1) .simplypr-step-number::after,
+.simplypr-stepper[data-active="3"] .simplypr-step:nth-child(3) .simplypr-step-number::after,
+.simplypr-stepper[data-active="3"] .simplypr-step:nth-child(5) .simplypr-step-number::after {
+  background: transparent;  
+}
+
+
+.simplypr-step-label,
+.simplypr-step > span:last-child {
+  font-size: 0.8125rem; 
+  color: #98a0ab;
+  white-space: nowrap;
+  margin-top: 0.25rem; 
+}
+
+
+.simplypr-step.active > span,
+.simplypr-stepper[data-active="2"] .simplypr-step:nth-child(3).active > span,
+.simplypr-stepper[data-active="3"] .simplypr-step:nth-child(5).active > span {
+  color: #0b6df0;
+  font-weight: 700;
+}
+
+
+@media (max-width: 45rem) { 
+  .simplypr-stepper { padding-left: 1rem; padding-right: 1rem; } 
+  .simplypr-step-label { font-size: 0.75rem; } 
+  .simplypr-step-number { width: 1.125rem; height: 1.125rem; } 
+}

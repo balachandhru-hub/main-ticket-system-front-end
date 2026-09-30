@@ -1,0 +1,190 @@
+.dropdown-with-action {
+  position: relative;
+  display: inline-flex;
+  align-items: stretch;
+  font-family: Arial, sans-serif;
+  width: 100%;
+  max-width: 20rem;
+}
+
+.dropdown-with-action .dropdown-headers {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+
+.dropdown-with-action .dropdown-toggle {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-right: none;
+  border-radius: 0.25rem 0 0 0.25rem;
+  background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 10rem;
+  text-align: left;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #1f2937;
+  transition: all 0.2s ease;
+}
+
+.dropdown-with-action .dropdown-toggle:hover {
+  background: linear-gradient(to bottom, #f5f5f5, #e5e7eb);
+  border-color: #2563eb;
+  color: #2563eb;
+}
+
+.dropdown-with-action .dropdown-toggle:active {
+  background: #e5e7eb;
+  transform: scale(0.98);
+}
+
+.dropdown-with-action .action-btns {
+  padding: 0.5rem 0.875rem;
+  border: 1px solid #d1d5db;
+  background: #2563eb;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 0 0.25rem 0.25rem 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-with-action .action-btns:hover {
+  background: #1d4ed8;
+  box-shadow: 0 0.125rem 0.25rem rgba(37, 99, 235, 0.3);
+}
+
+.dropdown-with-action .action-btns:active {
+  background: #1e40af;
+  transform: scale(0.98);
+}
+
+.dropdown-with-action .action-btns.disabled {
+  background: #e5e7eb;
+  color: #6b7280;
+  cursor: not-allowed;
+  border-color: #d1d5db;
+  box-shadow: none;
+}
+
+.dropdown-with-action .dropdown-list-b {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  max-height: 12.5rem;
+  overflow-y: auto;
+  z-index: 1000;
+  margin-top: 0.25rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-with-action .dropdown-option {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  font-size: 0.875rem;
+}
+
+.dropdown-with-action .dropdown-option:hover {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.dropdown-with-action .checkbox-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.dropdown-with-action .dropdown-list-b .checkbox-custom {
+  position: relative;
+  background-color: #ffffff;
+  border: 2px solid #d1d5db;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.dropdown-with-action .dropdown-option:hover .checkbox-custom {
+  border-color: #2563eb;
+}
+
+.dropdown-with-action .dropdown-list-b .checkbox-custom:after {
+  content: '';
+}
+
+.dropdown-with-action .checkbox-input:checked ~ .checkbox-custom {
+  background-color: #2563eb;
+  border-color: #2563eb;
+}
+
+.dropdown-with-action .checkbox-input:indeterminate ~ .checkbox-custom {
+  background-color: #2563eb;
+  border-color: #2563eb;
+}
+
+.dropdown-with-action .checkbox-input:indeterminate ~ .checkbox-custom:after {
+  content: '';
+  position: absolute;
+  left: 0.05rem;
+  top: 0.3rem;
+  width: 0.625rem;
+  height: 0.125rem;
+  background-color: #ffffff;
+  border-radius: 1px;
+}
+
+.dropdown-with-action .select-all-section {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.dropdown-with-action .select-all-option {
+  font-weight: 600;
+  background-color: #f8f9fa;
+  padding: 0.625rem 0.75rem;
+  color: #1f2937;
+}
+
+.dropdown-with-action .dropdown-separator {
+  height: 1px;
+  background-color: #e5e7eb;
+  margin: 0.25rem 0;
+}
+
+.dropdown-with-action .item-text {
+  flex: 1;
+  font-size: 0.875rem;
+  color: #1f2937;
+}
+
+.dropdown-with-action .no-data {
+  padding: 0.75rem;
+  text-align: center;
+  color: #6b7280;
+  font-style: italic;
+  font-size: 0.875rem;
+}
+
+.dropdown-with-action .loading-option {
+  padding: 0.75rem;
+  text-align: center;
+  color: #6b7280;
+  font-style: italic;
+  font-size: 0.875rem;
+}

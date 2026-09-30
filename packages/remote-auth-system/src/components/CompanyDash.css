@@ -1,0 +1,132 @@
+.CD-dashboard-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem ;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.CD-title-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1.5rem; 
+  text-align: center;
+}
+
+.CD-dashboard-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+  word-break: break-word;
+}
+
+.CD-dashboard-rows {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.CD-card-row {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  max-width: 54.2rem;
+  justify-content: center;
+}
+
+.CD-card-row.last-row {
+  justify-content: flex-start;
+}
+
+.CD-dashboard-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  flex: 1 1 18.75rem; 
+  max-width: 26.25rem; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.08);
+  transition: background-color 0.25s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.CD-dashboard-card:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+.CD-card-image {
+  width: 8rem;
+  height: 8rem;
+  padding-bottom: 1rem;
+  object-fit: contain;
+}
+
+.CD-dashboard-card:hover .CD-card-image {
+  filter: none;
+}
+
+.CD-card-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #0078ff;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.CD-dashboard-card:hover .CD-card-title {
+  color: #ffffff;
+}
+
+@media (max-width: 48rem) {
+  .CD-card-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .CD-dashboard-card {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .CD-dashboard-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .CD-card-title {
+    font-size: 0.95rem;
+  }
+
+  .CD-card-image {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-container-user {
+  height: 75vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  overflow: hidden;
+}

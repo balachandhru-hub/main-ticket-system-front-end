@@ -1,0 +1,205 @@
+/*ticketdetailspage.css*/
+
+.ticket-view-page {
+  padding: 1rem;
+  min-height: 100vh;
+}
+
+
+.ticket-header {
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding-bottom: 2rem;
+  width: 100%;
+  padding-top: .1rem;
+}
+
+.ticketview-back-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: none;
+  border: none;
+  color: #555;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  flex-shrink: 0;
+  transform: translatex(1.1rem);
+}
+
+.ticketview-heading {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  text-align: center;
+  white-space: nowrap;
+  /* padding-top: 1rem; */
+}
+
+.header-spacer {
+  width: 3.75rem;
+  flex-shrink: 0;
+}
+
+.ticket-content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.edit-button-container {
+  padding-bottom: 1.5rem;
+  text-align: right;
+}
+
+.edit-button-container button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-button-container button:not(:disabled):hover {
+  transform: translateY(-0.0625rem);
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.15);
+}
+
+.edit-button-container button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+.loader {
+  width: 2.5rem;
+  aspect-ratio: 1;
+  color: #1976d2;
+  position: relative;
+  background: radial-gradient(0.625rem, currentColor 94%, #0000);
+}
+
+.loader:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background:
+    radial-gradient(0.5625rem at bottom right, #0000 94%, currentColor) top left,
+    radial-gradient(0.5625rem at bottom left, #0000 94%, currentColor) top right,
+    radial-gradient(0.5625rem at top right, #0000 94%, currentColor) bottom left,
+    radial-gradient(0.5625rem at top left, #0000 94%, currentColor) bottom right;
+  background-size: 1.25rem 1.25rem;
+  background-repeat: no-repeat;
+  animation: l18 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+
+@keyframes l18 {
+  33% {
+    inset: -0.625rem;
+    transform: rotate(0deg)
+  }
+
+  66% {
+    inset: -0.625rem;
+    transform: rotate(90deg)
+  }
+
+  100% {
+    inset: 0;
+    transform: rotate(90deg)
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 48rem) {
+  .ticket-view-page {
+    padding: 0.75rem;
+  }
+
+  .ticket-header {
+    padding-bottom: 2.5rem;
+  }
+
+  .ticketview-heading {
+    font-size: 1.25rem;
+  }
+
+  .ticketview-back-btn {
+    font-size: 0.875rem;
+    padding: 0.375rem;
+  }
+
+  .header-spacer {
+    width: 3.125rem;
+  }
+
+  .edit-button-container {
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  .edit-button-container button {
+    width: 100%;
+    max-width: 18.75rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .ticketview-back-btn {
+    transform: none;          
+    margin-left: 0.75rem;
+    margin-left: 1rem;
+    
+  }
+
+
+
+  .ticketview-heading {
+    font-size: 1.125rem;
+    white-space: normal;
+    max-width: 12.5rem;
+  }
+
+  .ticketview-back-btn {
+    font-size: 0.8rem;
+  }
+
+  .header-spacer {
+    width: 2.5rem;
+  }
+
+  .ticket-header {
+    padding-bottom: 2.5rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .ticketview-back-btn {
+    display: none;
+  }
+
+  .edit-button-container {
+    display: none;
+  }
+
+  .ticket-view-page {
+    padding: 0;
+  }
+}

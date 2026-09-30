@@ -1,0 +1,391 @@
+/* UserQueries */
+/* MAIN CONTAINER */
+/* ------------------------------ */
+
+.uq-container {
+  padding: 1.25rem 2rem; 
+  font-family: Inter, sans-serif;
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+/* ------------------------------ */
+/* HEADER */
+/* ------------------------------ */
+
+.uq-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem; 
+  margin-bottom: 1.875rem; 
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.uq-header-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 0.375rem; 
+}
+
+.button-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-bottom: 0.01875rem; 
+  padding-top: 0.00625rem; 
+  transform: translateY(0.09375rem) !important; 
+}
+
+@media (max-width: 30rem) { 
+  .button-bar {
+    transform: translate(0.09375rem) !important; 
+    padding-left: 1.4rem;
+  }
+}
+
+.uq-header-row:nth-child(2) {
+  justify-content: center;
+}
+
+.uq-header-row:last-child {
+  justify-content: flex-end;
+}
+
+.uq-header-row h1 {
+  margin: 0;
+  font-size: 1.75rem; 
+  font-weight: 600;
+  color: #1d1d1d;
+  text-align: center;
+}
+
+.uq-export-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; 
+  background: #1e73ff;
+  color: white;
+  border: none;
+  padding: 0.625rem 1rem; 
+  border-radius: 0.5rem; 
+  font-size: 0.875rem; 
+  cursor: pointer;
+}
+
+/* ------------------------------ */
+/* FILTER BOX */
+/* ------------------------------ */
+
+.uq-filter-box {
+  background: white;
+  padding: 1.5625rem; 
+  border: 0.0625rem solid #e5e7eb !important;
+  border-radius: 0.75rem; 
+  box-shadow: 0 0.25rem 0.625rem rgba(0,0,0,0.06); 
+  margin-bottom: 1.875rem; 
+}
+
+.uq-filters-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.25rem; 
+  flex-wrap: wrap;
+}
+
+.uq-filter-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.uq-filter-field label {
+  font-size: 0.875rem; 
+  margin-bottom: 0.375rem; 
+  color: #444;
+}
+
+.uq-filter-field input,
+.uq-filter-field select {
+  padding: 0.625rem; 
+  width: 11.25rem; 
+  border-radius: 0.5rem; 
+  border: 0.0625rem solid #d1d5db;
+  font-size: 0.875rem;
+  background: #fff;
+}
+
+.uq-filter-actions {
+  display: flex;
+  gap: 0.625rem; 
+  margin-bottom: 0.25rem; 
+}
+
+.uq-apply-btn {
+  padding: 0.625rem 1.125rem; 
+  background: #1e73ff;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.uq-clear-btn {
+  padding: 0.625rem 1.125rem; 
+  background: #e5e7eb;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+/* ------------------------------ */
+/* TABLE */
+/* ------------------------------ */
+
+.uq-table-wrapper {
+  background: white;
+  padding: 0;
+  border: 0.0625rem solid #e5e7eb !important;
+  border-radius: 0.75rem; 
+  box-shadow: 0 0.25rem 0.625rem rgba(0,0,0,0.06); 
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.uq-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.uq-table th {
+  background: #f9fafb;
+  padding: 0.875rem; 
+  text-align: center;
+  font-weight: 600;
+  color: #555;
+  font-size: 0.875rem; 
+}
+
+.uq-table td {
+  padding: 1rem 1.5rem; 
+  text-align: center;
+  font-size: 0.875rem;
+  border-top: 0.0625rem solid #f0f0f0;
+  color: #505050;
+  max-width: 11.25rem; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.uq-table tr {
+  border-bottom: 0.0625rem solid #f0f0f0;
+}
+
+.uq-table td:nth-child(6) {
+  max-width: 15.625rem; 
+}
+
+/* ------------------------------ */
+/* CLICKABLE ROW */
+/* ------------------------------ */
+
+.uq-row {
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.uq-row:hover {
+  background: #f3f6ff;
+}
+
+/* ------------------------------ */
+/* STATUS BADGES */
+/* ------------------------------ */
+
+.uq-status-badge {
+  padding: 0.375rem 0.75rem; 
+  border-radius: 1.25rem; 
+  font-size: 0.75rem; 
+  font-weight: 500;
+}
+
+.uq-status-badge.Open {
+  background: #fff7d1;
+  color: #c39400;
+}
+
+.uq-status-badge.In-Progress {
+  background: #ffe2e2;
+  color: #d64545;
+}
+
+.uq-status-badge.Resolved {
+  background: #def7e5;
+  color: #239c56;
+}
+
+/* ────────────────────────────── */
+/* MODERN PAGINATION BUTTONS     */
+/* ────────────────────────────── */
+
+.uq-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem; 
+  padding: 0.75rem 0.25rem; 
+  font-family: inherit;
+}
+
+.uq-page-info {
+  font-size: 0.90625rem; 
+  color: #444;
+  font-weight: 500;
+  letter-spacing: 0.0125rem; 
+}
+
+.uq-pagination-buttons {
+  display: flex;
+  gap: 0.75rem; 
+}
+
+/* Reusable button style — matches your Export button */
+.uq-pagination-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; 
+  padding: 0.625rem 1.25rem; 
+  font-size: 0.875rem; 
+  font-weight: 500;
+  border-radius: 0.625rem; 
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: none;
+  box-shadow: 0 0.125rem 0.375rem rgba(0, 0, 0, 0.08); 
+}
+
+/* Previous Button */
+.uq-pagination-btn.prev {
+  background: #f8f9fa;
+  color: #555;
+  border: 0.0625rem solid #e2e8f0;
+}
+
+.uq-pagination-btn.prev:hover:not(:disabled) {
+  background: #e2e8f0;
+  transform: translateY(-0.0625rem); 
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.12); 
+}
+
+.uq-pagination-btn.prev:disabled {
+  background: #f1f3f5;
+  color: #aaa;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Next Button — Primary Style (like Export) */
+.uq-pagination-btn.next {
+  background: #1e73ff;
+  color: white;
+}
+
+.uq-pagination-btn.next:hover:not(:disabled) {
+  background: #1a66e6;
+  transform: translateY(-0.0625rem); 
+  box-shadow: 0 0.375rem 1rem rgba(30, 115, 255, 0.3);
+}
+
+.uq-pagination-btn.next:disabled {
+  background: #a0c4ff;
+  color: #e0e0e0;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Optional: Add icons for extra polish */
+.uq-pagination-btn svg {
+  width: 1rem; 
+  height: 1rem;
+}
+
+@media (max-width: 48rem) { 
+
+  /* Container padding reduces */
+  .uq-container {
+    padding: 0.625rem; 
+  }
+
+  /* Header rows align better */
+  .uq-header-row {
+    padding: 0;
+    justify-content: center !important;
+  }
+
+  .uq-header-row:first-child {
+    justify-content: flex-start !important;
+  }
+
+  .uq-header-row:last-child {
+    justify-content: center !important;
+    margin-top: 0.25rem; 
+  }
+
+  /* Title size reduces */
+  .uq-header-row h1 {
+    font-size: 1.375rem; 
+    text-align: center;
+  }
+
+  /* Export button full width */
+  .uq-export-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Filters become full width */
+  .uq-filter-field input,
+  .uq-filter-field select {
+    width: 100%;
+  }
+
+  .uq-filters-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .uq-filter-actions {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  /* Table becomes scrollable */
+  .uq-table-wrapper {
+    overflow-x: auto;
+  }
+
+  .uq-table {
+    width: max-content;
+    min-width: 100%;
+  }
+
+  .uq-table td,
+  .uq-table th {
+    white-space: nowrap;
+  }
+
+  /* Pagination becomes vertical on small screens */
+  .uq-pagination {
+    flex-direction: column;
+    gap: 0.625rem; 
+    text-align: center;
+  }
+}

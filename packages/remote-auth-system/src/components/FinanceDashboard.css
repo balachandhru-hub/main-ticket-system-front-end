@@ -1,0 +1,210 @@
+.finance-dashboard {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-family: sans-serif;
+}
+
+.dashboard-title {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+/* --- STAT CARDS SECTION --- */
+.stats-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-between;
+  
+}
+
+.stat-card {
+  flex: 1 1 22%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.stat-card:hover {
+  transform: translateY(-0.2rem);
+}
+
+.stat-info p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.stat-info h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.stat-icon1,
+.stat-icon2,
+.stat-icon3,
+.stat-icon4 {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+.stat-icon1 {
+  color: rgb(26, 46, 223);
+}
+.stat-icon2 {
+  color: rgb(169, 10, 209);
+}
+.stat-icon3 {
+  color: rgb(45, 209, 19);
+}
+.stat-icon4 {
+  color: rgb(224, 12, 12);
+}
+
+/* --- FILTER SECTION --- */
+.filters-section {
+  border: 0.08rem solid #ddd;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-right : 25rem;
+}
+
+.filters-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+}
+
+.filters-inputs {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.input-with-icon {
+  position: relative;
+  flex: 1 1 30%;
+  min-width: 200px;
+}
+
+.input-with-icon .input-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  color: #888;
+  pointer-events: none;
+}
+
+.input-with-icon input {
+  width: 100%;
+  padding: 0.75rem 0.75rem 0.75rem 2.2rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+.filters-inputs select {
+  flex: 1 1 30%;
+  min-width: 200px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+}
+
+/* --- TABLE SECTION --- */
+.table-section {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #f0f0f0;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 1rem;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-icon {
+  cursor: pointer;
+  color: #333;
+  transition: color 0.2s ease-in-out;
+}
+
+.action-icon:hover {
+  color: #007bff;
+}
+/* ============================== */
+/*         RESPONSIVE CSS        */
+/* ============================== */
+
+/* ✅ Tablet and Mobile (Force 2 cards per row always) */
+@media (max-width: 991px) {
+  .stats-section {
+    justify-content: center; /* Optional: ensures even spacing */
+  }
+
+  .stat-card {
+    flex: 1 1 calc(50% - 1rem); /* 2 cards per row */
+    padding: 1.2rem;
+  }
+}
+
+/* ✅ Even for smaller screens below 770px */
+@media (max-width: 770px) {
+  .stat-card {
+    flex: 1 1 calc(50% - 1rem); /* still 2 per row */
+    padding: 1rem;
+  }
+}
+
+/* ✅ Filters full width for very small devices */
+@media (max-width: 765px) {
+  .input-with-icon,
+  .filters-inputs select {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .dashboard-title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}

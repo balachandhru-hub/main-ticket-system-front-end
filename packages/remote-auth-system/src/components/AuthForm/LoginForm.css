@@ -1,0 +1,241 @@
+/* src/components/AuthForm/LoginForm.css */
+
+.lf-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.lf-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.lf-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  text-align: left;
+}
+
+
+.lf-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.lf-group {
+  position: relative;
+}
+
+.lf-toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.lf-toggle-password:hover {
+  color: #135fd7;
+}
+
+.lf-toggle-password:focus {
+  outline: none;
+}
+
+
+
+.lf-input:focus+.lf-label,
+.lf-input:not(:placeholder-shown)+.lf-label {
+  display: none;
+}
+
+
+.lf-button:hover {
+  background: #125ea2;
+}
+
+.lf-footer {
+  text-align: left;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: white;
+}
+
+
+.lf-input {
+  width: 100%;
+  padding: 0.85rem 2.5rem 0.85rem 0.75rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background: white;
+  outline: none;
+}
+
+.lf-label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    background: #fff;
+    padding: 0 4px;
+    color: #888;
+    transition: all .2s;
+    pointer-events: none;
+}
+
+.lf-button {
+  background: #135fd7;
+  color: white;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.lf-button:hover {
+  background: #0d47a1;
+}
+
+.lf-footer {
+  text-align: left;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: white;
+}
+
+
+.lf-footer a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+.lf-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Microsoft Sign In Button */
+.lf-microsoft-button {
+  width: 100%;
+  padding: 0.75rem;
+  background: white;
+  color: black;
+  border: 1px solid #dadce0;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: all 0.2s ease;
+}
+
+.lf-microsoft-button:hover:not(:disabled) {
+  background: #f8f9fa;
+  border-color: #c0c0c0;
+}
+
+.lf-microsoft-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.lf-microsoft-logo {
+  width: 20px;
+  height: 20px;
+}
+
+/* OR Divider */
+.lf-divider {
+  position: relative;
+  text-align: center;
+}
+
+.lf-divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.lf-divider-text {
+  position: relative;
+  display: inline-block;
+  padding: 0 12px;
+  background: transparent;
+  color: black;
+  font-size: 0.9rem;
+  font-weight: 400;
+  z-index: 1;
+}
+
+.lf-additional-query {
+  background: none;
+  border: none;
+  font-size: 0.85rem;
+  padding: 0.5rem 0 0 0;
+  text-align: right;
+  color: #000000;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+.lf-contact-support {
+  color: #0066ff;
+  text-decoration: underline;
+}
+
+.lf-contact-support:hover {
+  color: #0052cc;
+  text-decoration: underline;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .lf-box{
+    min-width: 15rem;
+  }
+}
+
+
+.lf-box {
+  flex: 1;
+}
+
+.lf-rate-limit-error {
+  color: #d32f2f;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}

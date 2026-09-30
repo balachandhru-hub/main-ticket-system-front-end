@@ -1,0 +1,64 @@
+.discount-popup-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.discount-popup {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 1rem rgba(0,0,0,0.15);
+  min-width: 20rem;
+  text-align: center;
+}
+.discount-popup h3 {
+  margin-bottom: 1rem;
+}
+.discount-popup select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+.popup-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.popup-actions button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  justify-content: center;
+  font-weight: 600;
+  width: 13.3125rem;
+  height: 2.5rem;
+  box-sizing: border-box;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+.popup-actions button:last-child {
+  background-color: #f1f1f1;
+  color: #333;
+}
+.popup-actions button:hover {
+  background-color: #0056b3;
+}
+.coupon-success {
+  margin-top: 1rem;
+  color: #007bff;
+  font-weight: bold;
+}

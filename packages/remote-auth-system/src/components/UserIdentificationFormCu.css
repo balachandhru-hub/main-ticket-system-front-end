@@ -1,0 +1,90 @@
+.cu-section {
+  border: 0.0625rem solid #e0e0e0;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  padding-bottom: 2rem;
+box-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.05); 
+}
+
+.cu-section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  padding-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+.cu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: 1.25rem;
+   overflow: visible;
+  position: relative;
+}
+
+.cu-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+   position: relative;
+  overflow: visible;
+  z-index: auto;
+}
+
+.cu-form-group label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #2c3e50;
+  text-align: left;
+  padding-left: .6rem;
+}
+
+.cu-form-group input,
+.cu-form-group select {
+  padding: 0.6rem 0.75rem;
+  font-size: 0.875rem;
+  border: 0.0625rem solid #ccc; 
+  border-radius: 0.375rem;
+  background-color: #f2f2f2;
+  outline: none;
+  color: #2c3e50;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cu-form-group input:focus,
+.cu-form-group select:focus {
+  border-color: #2563EB;
+ box-shadow: 0 0 0 0.125rem rgba(37, 99, 235, 0.2);
+}
+
+.cu-form-group.half {
+  grid-column: span 1;
+}
+
+.cu-form-group.full-width {
+  grid-column: span 2;
+}
+
+.cu-error-text {
+  color: red;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 600px) {
+  .cu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cu-form-group.full-width {
+    grid-column: span 1;
+  }
+}
+.cu-required {
+  color: red;
+  left: 0.125rem;;
+}
+.cu-form-group {
+  position: relative;
+  overflow: visible;
+}

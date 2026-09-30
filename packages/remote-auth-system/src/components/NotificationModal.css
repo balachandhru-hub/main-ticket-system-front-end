@@ -1,0 +1,182 @@
+/* ===== Overlay ===== */
+.po-notification-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* ===== Modal ===== */
+.po-notification-modal {
+  background: #ffffff;
+  border-radius: 10px;
+  width: 420px;
+  max-width: 95%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  animation: fadeInScale 0.3s ease;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Success, Error, and Confirm color borders */
+.po-notification-modal.po-success {
+  border-top: 5px solid #28a745;
+}
+
+.po-notification-modal.po-error {
+  border-top: 5px solid #dc3545;
+}
+
+.po-notification-modal.po-confirm {
+  border-top: 5px solid #ffc107;
+}
+
+/* ===== Header ===== */
+.po-notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+  background: #f9f9f9;
+}
+
+.po-notification-header h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+
+.po-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.po-close-btn:hover {
+  color: #333;
+}
+
+/* ===== Body ===== */
+.po-notification-body {
+  padding: 16px;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.po-message-line {
+  margin: 0 0 10px 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+/* Success message (top) */
+.po-success {
+  font-weight: 600;
+  color: #28a745;
+  margin-bottom: 12px;
+}
+
+/* Error list */
+.po-message-list {
+  padding-left: 20px;
+  margin: 0;
+  color: #dc3545;
+}
+
+.po-message-item {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+
+/* ===== Footer ===== */
+.po-notification-footer {
+  padding: 12px 16px;
+  border-top: 1px solid #eee;
+  text-align: right;
+  background: #f9f9f9;
+}
+
+/* Single OK button */
+.po-ok-btn {
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.po-ok-btn:hover {
+  background: #0069d9;
+}
+
+/* Confirm buttons container */
+.po-confirm-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+/* Cancel button (No) */
+.po-cancel-btn {
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #f8f9fa;
+  color: #495057;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.po-cancel-btn:hover {
+  background: #e9ecef;
+  border-color: #adb5bd;
+}
+
+/* Confirm button (Yes) */
+.po-confirm-btn {
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  background: #28a745;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.po-confirm-btn:hover {
+  background: #218838;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

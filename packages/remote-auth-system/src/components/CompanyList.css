@@ -1,0 +1,148 @@
+/* Centered message for no customers found */
+.no-customers-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  text-align: center;
+}
+.CL-dashboard-container {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.CL-dashboard-title {
+  text-align: center;
+  color: #6f7378;
+}
+
+.CL-dashboard-header {
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.CL-add-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6875rem 0.4375rem;
+  background-color: #0b74de;
+  color: white;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.CL-add-btn:hover {
+  background-color: #095bb5;
+}
+
+.CL-add-icon {
+  font-size: 1.125rem;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0rem;
+}
+
+.pagination-controls button {
+  padding: 6px 12px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination-controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+  .CL-dashboard-container {
+    padding: 1rem;
+  }
+
+  .no-customers-center {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .CL-dashboard-header {
+    gap: 0.5rem;
+    padding-inline: 0.75rem;
+  }
+
+  .CL-dashboard-title {
+    font-size: 1.35rem;
+    padding-bottom: 1rem;
+  }
+
+  .CL-add-btn {
+    font-size: 0.875rem;
+    padding: 0.625rem 0.875rem;
+  }
+
+  .CL-add-icon {
+    font-size: 1rem;
+  }
+
+  .CL-dashboard-card {
+    width: 90%;
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  .CL-card-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.pagination-controls button {
+  padding: 6px 12px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination-controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.CL-back-btn {
+    display: flex;
+    padding-left: 1.8rem;
+     align-items: center;
+     font-size: 0.9rem;
+     color: black;          
+  background: none;        
+  border: none;           
+  cursor: pointer;
+  border-radius: 0.375rem; 
+  box-shadow: none;       
+  transition: color 0.2s ease;
+  padding-left: 0.6rem;
+
+}

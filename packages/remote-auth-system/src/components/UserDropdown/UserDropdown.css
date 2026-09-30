@@ -1,0 +1,141 @@
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.user-trigger {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  background-color: #f9fafb;
+  border-radius: 9999px;
+  transition: background 0.3s ease;
+}
+
+.user-trigger:hover {
+  background-color: #e5e7eb;
+}
+
+.avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  object-fit: cover;
+}
+
+.username {
+  font-weight: 500;
+  color: #1f2937;
+  font-size: 0.80rem;
+}
+
+.arrow {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  width: 17rem;
+  z-index: 1000;
+  animation: dropdownFade 0.3s ease-in-out;
+}
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.user-info {
+  text-align: center;
+  padding: 0.625rem 0;
+
+}
+
+.user-info .name {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #000000;
+}
+
+.user-info .email {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.95rem;
+  color: #374151;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f3f4f6;
+}
+
+.dropdown-icon {
+  font-size: 1.1rem;
+  color: #4b5563;
+}
+.dropdown-icon-reset{
+  font-size: 1.5rem;
+  color: #4b5563;
+}
+.logout {
+  color: #dc2626;
+}
+
+.logout:hover .dropdown-icon {
+  color: #dc2626;
+}
+
+@media (max-width: 768px) {
+  .dropdown-menu {
+    width: 90vw;
+    right: 5%;
+    padding: 0.75rem;
+  }
+
+  .username {
+    display: none;
+  }
+
+  .user-trigger {
+    padding: 0.25rem;
+  }
+
+  .avatar {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.dropdown-item a {
+  all: unset;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+}

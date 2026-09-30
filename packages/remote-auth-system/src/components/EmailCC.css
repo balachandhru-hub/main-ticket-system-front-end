@@ -1,0 +1,237 @@
+.emailcc-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding-bottom: .5rem;
+}
+
+.emailcc-section-title {
+  font-weight: 600;
+  font-size: 1rem;
+  flex: 1;
+  min-width: 8rem;
+}
+
+.emailcc-add-btn {
+  background: #2979ff;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+.emailcc-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;      
+}
+
+.emailcc-table th,
+.emailcc-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  vertical-align: middle;
+  line-height: 1.4;
+  border-bottom: 0.0625rem solid #eee;
+}
+
+.emailcc-table th:first-child,
+.emailcc-table td:first-child {
+  text-align: left;
+}
+
+.emailcc-table th:last-child,
+.emailcc-table td:last-child {
+  text-align: right;
+  width: 1%;                
+  white-space: nowrap;
+  padding-right: 1rem;
+}
+
+.emailcc-table th:nth-child(2),
+.emailcc-table td:nth-child(2) {
+  padding-left: 0;
+  text-align: inherit;
+}
+
+.emailcc-action-icons {
+  display: inline-flex;      
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.emailcc-icon-image {
+  width: 1.125rem;
+  height: 1.125rem;
+  line-height: 1;
+  color: #333;
+  cursor: pointer;
+  transition: transform 0.15s ease-in-out, opacity 0.15s ease-in-out;
+}
+
+.emailcc-icon-image:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.emailcc-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.emailcc-popup-card {
+  background: #fff;
+  width: 23.75rem;
+  max-width: 95%;
+  padding: 1.5rem;
+  border-radius: .75rem;
+  box-shadow: 0 .375rem 1.125rem rgba(0, 0, 0, 0.25);
+  animation: popupFadeIn 0.3s ease;
+  text-align: center;
+}
+
+.emailcc-popup-card h3 {
+  padding: 0 0 1.125rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.emailcc-popup-card input {
+  width: 100%;
+  padding: 1rem .75rem;
+  padding-bottom: 1.125rem;
+  border: 0.0625rem solid #ccc;
+  border-radius: .5rem;
+  font-size: .875rem;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.emailcc-popup-card input:focus {
+  border-color: #4a90e2;
+}
+
+.emailcc-popup-actions {
+  display: flex;
+  justify-content: center;
+  gap: .75rem;
+  padding: .5rem .5rem .5rem .5rem;
+    height: 3.5rem;
+}
+
+.emailcc-save-btn,
+.emailcc-cancel-btn,
+.emailcc-delete-btn {
+  padding: .5rem 3.8rem;
+  font-size: .875rem;
+  font-weight: 500;
+  border: none;
+  border-radius: .5rem;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.emailcc-save-btn {
+  background: #2979ff;
+  color: #fff;
+}
+.emailcc-save-btn:hover {
+  background: #357ab8;
+}
+
+.emailcc-cancel-btn {
+  background: #f0f0f0;
+  color: #333;
+}
+.emailcc-cancel-btn:hover {
+  background: #ddd;
+}
+
+.emailcc-delete-btn {
+  background: #e74c3c;
+  color: #fff;
+}
+.emailcc-delete-btn:hover {
+  background: #c0392b;
+}
+
+@keyframes popupFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-.9375rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 48rem) {
+  .emailcc-table th,
+  .emailcc-table td {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+  .emailcc-add-btn {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .emailcc-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .emailcc-icon-image {
+    width: 1rem;
+    height: 1rem;
+  }
+  .emailcc-add-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+.emailcc-back-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 1rem;
+  padding-left: 1.3rem;
+  width: 100%;
+}
+
+/* Tablet & Mobile */
+@media (max-width: 48rem) {
+  .emailcc-back-bar {
+    padding-top: 0.75rem;
+    padding-left: 1rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 30rem) {
+  .emailcc-back-bar {
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+  }
+}
+

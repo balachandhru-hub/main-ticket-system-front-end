@@ -1,0 +1,80 @@
+.cu-custom-select {
+  position: relative;
+  width: 100%;
+}
+
+.cu-custom-select-trigger {
+  width: 100%;
+  height: 38px;
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  padding: 0 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cu-custom-select-trigger:hover {
+  border-color: #2684ff;
+}
+
+.cu-arrow {
+  font-size: 23px;
+  margin-left: 10px;
+   transition: transform 0.25s ease;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cu-custom-select-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  z-index: 1000;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.cu-custom-select-search {
+  width: 100%;
+  padding: 8px 10px;
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+  outline: none;
+  font-size: 14px;
+}
+
+.cu-custom-select-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.cu-custom-select-list li {
+  padding: 10px 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.cu-custom-select-list li:hover {
+  background-color: #f2f7ff;
+}
+
+.cu-disabled {
+  color: #999;
+  cursor: not-allowed;
+}
+.cu-arrow.open {
+  transform: rotate(180deg);
+}
+.cu-custom-select-trigger {
+  user-select: none;
+}

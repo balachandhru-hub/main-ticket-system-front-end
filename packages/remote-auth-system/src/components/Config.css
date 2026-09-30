@@ -1,0 +1,108 @@
+.config-container {
+  padding: 1.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.config-back-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 1.6rem;
+  padding-top: 1rem;
+}
+@media (max-width: 768px) {
+  .config-back-wrapper {
+    padding-left: 0.8rem;
+  }
+}
+
+.config-main-title {
+  .config-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+}
+
+.config-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 0.rem;
+}
+
+.config-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 1.2rem;
+}
+
+.config-buttons button {
+  width: 100%;
+  max-width: 30rem;
+  padding: 0.75rem 1.25rem;
+  border: 0.0625rem solid #ddd;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+}
+
+.config-buttons button:hover {
+  background-color: #1976d2;
+  color: #fff;
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .config-container {
+    padding: 1rem 1.25rem;
+    gap: 1.5rem;
+  }
+
+  .config-logo {
+    width: 2.5rem;
+  }
+
+  .config-title-block h3 {
+    font-size: 1.1rem;
+  }
+
+  .config-title-block p {
+    font-size: 0.9rem;
+  }
+
+  .config-main-title {
+    font-size: 1.3rem;
+  }
+
+  .config-buttons button {
+    width: 80%;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .config-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .config-main-title {
+    font-size: 1.1rem;
+  }
+
+  .config-buttons button {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+}

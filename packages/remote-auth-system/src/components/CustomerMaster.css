@@ -1,0 +1,725 @@
+
+.customer-wrapper {
+  padding: 1.5rem;
+  background-color: #fff;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.customer-align {
+  padding-inline: 1rem;
+  width: 100%;
+}
+
+.title-row {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.customer-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  word-break: break-word;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+
+
+.create-user {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.625rem 1rem;
+  background-color: #1d4ed8;
+  color: #fff;
+  font-size: 0.875rem;
+  width: max-content;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.875rem;
+}
+
+.download-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background-color: #1d4ed8;
+  color: #fff;
+  font-size: 0.875rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.download-text {
+  display: inline;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-right: 2.6rem;
+}
+
+.search-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;   
+  flex: 1;
+  min-width: 12rem;
+  flex-wrap: wrap;
+  padding: 0 0 0.3rem .1rem; 
+}
+
+.menu-header-user-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1.5rem 1rem !important;
+  gap: 2rem;
+}
+
+.customer-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  background-color: #ffff;
+  box-sizing: border-box;
+  position: relative;
+  padding: 1.5rem 1rem !important;
+}
+@media (max-width: 48rem) {
+
+  .toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 1rem;
+  }
+
+  .search-row {
+    width: 100%;
+    padding-left: .1rem;
+  }
+
+  .create-user-btn {
+    width: auto;
+    text-align: flex-start;
+  }
+}
+
+.search-label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.styled-search-container {
+  display: flex;
+  align-items: center;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.375rem;
+  background-color: #fff;
+  overflow: hidden;
+  width: 100%;
+  max-width: 20rem;
+  min-width: 12rem;
+}
+
+.search-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-right: 2.6rem;
+}
+
+.styled-search-input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+
+.styled-search-button {
+  background: transparent;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.styled-search-button:hover {
+  background-color: #f0f0f0;
+  border-left: 0.0625rem solid #eee;
+}
+
+.customer-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  table-layout: fixed;
+}
+
+.customer-table thead {
+  background-color: #f1f1f1;
+}
+
+.customer-table th,
+.customer-table td {
+  padding: 0.75rem 0.5rem;
+  border-bottom: 0.0625rem solid #eee;
+  text-align: center;
+  vertical-align: middle;
+  word-break: break-word;
+  font-size: 0.875rem;
+}
+
+.customer-table th {
+  font-weight: 600;
+}
+
+.action-icons {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  background: none !important;
+}
+
+.edit-wrapper,
+.view-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-icon {
+  font-size: 1rem;
+  color: #4caf50;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.edit-icon:hover {
+  transform: scale(1.1);
+}
+
+.view-icon {
+  font-size: 1.4rem;
+  color: #00bcd4;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.view-icon:hover {
+  transform: scale(1.1);
+}
+.search-create-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+ 
+@media (max-width: 48rem) {
+  .customer-title {
+    font-size: 1.4rem;
+  }
+
+  .search-create-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .search-row {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+  }
+
+  .search-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .styled-search-container {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .download-btn {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .download-text {
+    display: none;
+  }
+
+  .styled-search-input {
+    font-size: 0.85rem;
+  }
+
+  .customer-table {
+    table-layout: auto;
+  }
+
+  .customer-table th,
+  .customer-table td {
+    padding: 0.5rem 0.3rem;
+    font-size: 0.78rem;
+    vertical-align: middle;
+  }
+
+  .customer-table td:last-child,
+  .customer-table th:last-child {
+    padding-right: 0.75rem;
+    padding-left: 0.5rem;
+    text-align: center;
+    white-space: nowrap;
+    width: max-content;
+    min-width: 5.5rem;
+  }
+
+  .edit-icon,
+  .view-icon {
+    font-size: 1.1rem;
+  }
+
+  .create-user-btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+    flex-shrink: 0;
+    border-radius: 0.5rem;
+    white-space: nowrap;
+  }
+
+  .create-user-text {
+    font-size: 0.8rem;
+  }
+
+  .action-icons {
+    justify-content: center !important;
+    padding-right: 0 !important;
+    gap: 0.3rem !important;
+  }
+
+  .llogin-as-button {
+    width: auto;
+    padding: 0.4rem 0.6rem !important;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border-radius: 0.5rem !important;
+    white-space: nowrap;
+    display: inline-block;
+    margin: 0.1rem 0;
+  }
+}
+
+@media (max-width: 30rem) {
+  .customer-title {
+    font-size: 1.2rem;
+  }
+
+  .search-create-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .search-row {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.4rem;
+    flex-wrap: nowrap;
+  }
+
+  .search-label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #333;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .styled-search-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .styled-search-input {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .customer-table {
+    table-layout: auto;
+  }
+
+  .customer-table th,
+  .customer-table td {
+    font-size: 0.68rem;
+    padding: 0.3rem 0.2rem;
+  }
+
+  .customer-table td:last-child,
+  .customer-table th:last-child {
+    padding-right: 0.6rem;
+    padding-left: 0.4rem;
+    white-space: nowrap;
+    width: max-content;
+    min-width: 5.2rem;
+  }
+
+  .edit-icon,
+  .view-icon {
+    font-size: 0.9rem;
+  }
+
+  .create-user-btn {
+    font-size: 0.7rem;
+    padding: 0.35rem 0.5rem;
+    flex-shrink: 0;
+    border-radius: 0.5rem;
+    height: auto;
+  }
+
+  .create-user-text {
+    font-size: 0.65rem;
+  }
+
+  .llogin-as-button {
+    width: auto;
+    padding: 0.4rem 0.5rem !important;
+    font-size: 0.7rem;
+    font-weight: 500;
+    border-radius: 0.5rem !important;
+    white-space: nowrap;
+    display: inline-block;
+    margin: 0.1rem 0;
+  }
+}
+
+.create-user-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background-color: #1d4ed8;
+  color: #fff;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  white-space: nowrap;
+  height: 2.5rem;
+}
+
+.create-user-text {
+  display: inline;
+}
+
+.pagination-controls-master {
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+  padding: 1.5rem 1rem !important;
+}
+
+.pagination-controls-master button {
+  padding: 0.375rem 0.75rem;
+  background-color: #007bff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.pagination-controls-master button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+
+
+.no-users-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 12.5rem;
+  font-size: 1.2rem;
+  color: #555;
+  font-weight: 500;
+}
+
+@media (max-width: 48rem) {
+  .search-create-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .search-row {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .styled-search-container {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .customer-table td:last-child,
+  .customer-table th:last-child {
+    padding-right: 1rem;
+  }
+
+  .action-icons {
+    justify-content: center !important;
+    padding-right: 0 !important;
+    gap: 0.3rem !important;
+  }
+
+  .llogin-as-button {
+    width: auto;
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.75rem;
+    border-radius: 0.5rem !important;
+    white-space: nowrap;
+    display: inline-block;
+  }
+}
+
+@media (max-width: 48rem) {
+  .design-column {
+    min-width: 3.75rem;
+    white-space: nowrap;
+  }
+}
+
+/* iPhone SE and smaller: ensure Login AS buttons stay consistent and not cut off */
+@media (max-width: 23.4375rem) {
+  .customer-table td:last-child,
+  .customer-table th:last-child {
+    padding-right: 1rem;
+  }
+
+  .llogin-as-button {
+    width: auto !important;
+    max-width: 100% !important;
+    padding: 0.45rem 0.6rem !important;
+    font-size: 0.75rem !important;
+    border-radius: 0.5rem !important;
+    white-space: nowrap !important;
+    display: inline-block !important;
+    margin: 0.15rem auto !important;
+  }
+}
+
+@media (max-width: 48rem) {
+  .search-row {
+    padding: 1rem 1rem 1rem .1rem;
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 15rem;
+  }
+}
+
+/* Back button container */
+.customer-back-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Mobile */
+@media (max-width: 48rem) {
+  .customer-back-btn {
+    padding-left: 0;
+  }
+}
+
+/* Ensure customer-align uses more of the viewport on very small phones (<=420px) */
+@media (max-width: 26.25rem) {
+  .customer-align {
+    /* let the aligned container use most of the viewport width */
+    width: 95vw;
+    max-width: 420px;
+    padding-inline: 1.25rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .customer-wrapper {
+    /* reduce inner wrapper padding so content fits better */
+    padding: 0.75rem;
+  }
+}
+
+/* Further adjustments for very small phones (<=350px) */
+@media (max-width: 350px) {
+  .customer-align {
+    width: 98vw;
+    max-width: 350px;
+    padding-inline: 0.9rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .customer-wrapper {
+    padding: 0.5rem;
+  }
+
+  .customer-title {
+    font-size: 1.1rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.8rem;
+  }
+}
+
+/* Adjustments for phones around 320px */
+@media (max-width: 320px) {
+  .customer-align {
+    width: 99vw;
+    max-width: 320px;
+    padding-inline: 0.5rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .customer-wrapper {
+    padding: 0.48rem;
+  }
+
+  .customer-title {
+    font-size: 1.08rem;
+    padding-top: 0.55rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
+/* Adjustments for phones around 300px */
+@media (max-width: 300px) {
+  .customer-align {
+    width: 95vw;
+    max-width: 300px;
+    padding-inline: 0.8rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .customer-wrapper {
+    padding: 0.45rem;
+  }
+
+  .customer-title {
+    font-size: 1.05rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.7rem;
+  }
+}
+
+/* Extra-small phones (<=250px) — make container use 90-95% of viewport */
+@media (max-width: 15.625rem) {
+  .customer-align {
+    width: 92vw;
+    max-width: 250px;
+    padding-inline: 0.6rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .customer-wrapper {
+    padding: 0.35rem;
+  }
+
+  .customer-title {
+    font-size: 1rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.6rem;
+  }
+
+  .styled-search-input {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.4rem;
+  }
+
+  .create-user-btn,
+  .download-btn {
+    padding: 0.35rem 0.5rem;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .search-create-container {
+    display: flex;
+    flex-direction: row;        /* keep row ✅ */
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    width: 100%;
+    /* flex-wrap: wrap;            🔥 key fix */
+  }
+
+  .search-row {
+    flex: 1 1 auto;             /* allow shrinking */
+    min-width: 0;               /* 🔥 prevents overflow */
+  }
+
+  .create-user-btn {
+   flex: 0 0 auto;
+    padding: 0.4rem 0.75rem;   /* 🔽 reduced size */
+    font-size: 0.75rem;        /* 🔽 smaller text */
+    border-radius: 0.4rem;
+    white-space: nowrap;
+  }
+}
+.create-user-btn {
+  box-sizing: border-box;
+}
+

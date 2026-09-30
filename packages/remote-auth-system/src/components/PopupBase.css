@@ -1,0 +1,152 @@
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 1rem;
+}
+
+.company-popup-box,
+.plan-popup-box,
+.tax-popup-box {
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  max-width: 36rem;
+  min-width: 20rem;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.company-popup-header,
+.plan-popup-header,
+.tax-popup-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.company-popup-header h3,
+.plan-popup-header h3,
+.tax-popup-header h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  color: #111;
+  text-align: center;
+}
+
+.company-close-icon,
+.plan-close-icon,
+.tax-close-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+}
+
+.company-popup-content,
+.plan-popup-content,
+.tax-popup-content {
+  display: table;
+  font-size: 0.95rem;
+  color: #000;
+}
+
+.company-popup-content .row,
+.plan-popup-content .row,
+.tax-popup-content .row {
+  display: table-row;
+}
+
+.company-popup-content .key,
+.plan-popup-content .key,
+.tax-popup-content .key {
+  display: table-cell;
+  text-align: left;
+  padding: 0.2rem 0.6rem 0.2rem 0;
+  color: #222;
+  white-space: nowrap;
+  font-weight: 400;
+  width: 12rem;
+}
+
+.company-popup-content .colon,
+.plan-popup-content .colon,
+.tax-popup-content .colon {
+  display: table-cell;
+  text-align: center;
+  width: 1.2rem;
+  color: #222;
+  font-weight: 500;
+}
+
+.company-popup-content .value,
+.plan-popup-content .value,
+.tax-popup-content .value {
+  display: table-cell;
+  text-align: left;
+  color: #007bff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 10rem;
+  word-break: break-word;
+  font-weight: 400;
+}
+
+.plan-popup-content .plan-add {
+  display: block;
+  width: 100%;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-top: 1.2rem;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+.plan-popup-content .plan-add:hover {
+  background-color: #1662c4;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center; /* vertical align if wrapper has height */
+  width: 100%;
+}
+
+.view-pr-button {
+  background-color: #1976d2;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+.view-pr-button:hover {
+  background-color: #145ca4;
+  transform: translateY(-2px);
+}

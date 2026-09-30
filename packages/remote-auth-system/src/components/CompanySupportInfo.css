@@ -1,0 +1,25 @@
+.phone-input-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.country-code-select {
+  padding: 0.5rem;
+  max-width: 3.5rem;
+  max-height: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.6rem;
+  background: #f2f2f2
+}
+
+.phone-number-input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.875rem;
+}

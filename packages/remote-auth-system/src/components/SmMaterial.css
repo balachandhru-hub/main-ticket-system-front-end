@@ -1,0 +1,820 @@
+.sm-pr-container {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 2rem;
+}
+
+.sm-pr-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+.sm-pr-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+.sm-pr-tabs {
+  display: flex;
+  gap: 0;
+  background-color: #f1f5f9;
+  border-radius: 0.375rem;
+  padding: 0.25rem;
+  width: fit-content;
+  border: .0625rem solid #e0e0e0;
+}
+
+.sm-pr-tab {
+  padding: 0.5rem 1.25rem;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sm-pr-tab:hover {
+  color: #374151;
+}
+
+.sm-pr-tab-active {
+  background-color: #ffffff;
+  color: #1f2937;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.sm-pr-content {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.sm-pr-action-bar {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.sm-pr-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.sm-pr-btn-icon {
+  font-size: 1rem;
+}
+
+.sm-pr-btn-create {
+  background-color: #7c3aed;
+  color: #ffffff;
+}
+
+.sm-pr-btn-create:hover {
+  background-color: #6d28d9;
+}
+
+.sm-pr-btn-upload {
+  background-color: #10b981;
+  color: #ffffff;
+}
+
+.sm-pr-btn-upload:hover {
+  background-color: #059669;
+}
+
+/* ============================================================ */
+/* NEW FILTER SECTION CSS */
+/* ============================================================ */
+
+/* Filter Section Container */
+.pr-filter-section {
+  background-color: #ffffff;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* Filter Header */
+.pr-filter-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.pr-filter-icon {
+  width: 1rem;
+  height: 1rem;
+  color: #6b7280;
+  flex-shrink: 0;
+}
+
+.pr-filter-title {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #1f2937;
+  padding: 0;
+}
+
+/* ============================================================ */
+/* GRID LAYOUT */
+/* ============================================================ */
+
+.pr-grid-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+.pr-grid-row-2 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+/* ============================================================ */
+/* FORM GROUP & LABEL */
+/* ============================================================ */
+
+.pr-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.pr-label {
+  font-size: 0.6875rem;
+  color: #6b7280;
+  padding-bottom: 0.375rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+/* ============================================================ */
+/* CHECKBOX DROPDOWN BUTTON */
+/* ============================================================ */
+
+.pr-checkbox-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.pr-dropdown-toggle {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  background-color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  color: #374151;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+.pr-dropdown-toggle:hover {
+  border-color: #9ca3af;
+  background-color: #fafafa;
+}
+
+.pr-dropdown-toggle:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.pr-dropdown-toggle span {
+  flex: 1;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ============================================================ */
+/* DROPDOWN MENU */
+/* ============================================================ */
+
+.pr-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 0.25rem);
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  z-index: 50;
+  max-height: 18rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Scrollbar Styling */
+.pr-dropdown-menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.pr-dropdown-menu::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 0.375rem;
+}
+
+.pr-dropdown-menu::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 0.375rem;
+}
+
+.pr-dropdown-menu::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* ============================================================ */
+/* SEARCH BOX */
+/* ============================================================ */
+
+.pr-search-box {
+  position: relative;
+  padding: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #fafafa;
+}
+
+.pr-search-input {
+  width: 100%;
+  padding: 0.5rem 2rem 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  outline: none;
+  box-sizing: border-box;
+  color: #374151;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+.pr-search-input::placeholder {
+  color: #9ca3af;
+}
+
+.pr-search-input:hover {
+  border-color: #9ca3af;
+}
+
+.pr-search-input:focus {
+  border-color: #295EE7;
+  box-shadow: 0 0 0 3px rgba(41, 94, 231, 0.1);
+}
+
+.pr-search-icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  width: 0.875rem;
+  height: 0.875rem;
+  color: #9ca3af;
+  flex-shrink: 0;
+}
+
+/* ============================================================ */
+/* SELECT ALL ITEM */
+/* ============================================================ */
+
+.pr-select-all-item {
+  padding: 0.625rem 0.75rem !important;
+  background-color: #f9fafb;
+}
+
+.pr-select-all-item:hover {
+  background-color: #f3f4f6 !important;
+}
+
+.pr-select-all-label {
+  font-weight: 600 !important;
+  color: #1f2937 !important;
+}
+
+/* ============================================================ */
+/* DROPDOWN DIVIDER */
+/* ============================================================ */
+
+.pr-dropdown-divider {
+  height: 1px;
+  background-color: #e5e7eb;
+  margin: 0;
+}
+
+/* ============================================================ */
+/* CHECKBOX ITEMS */
+/* ============================================================ */
+
+.pr-checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  font-size: 0.75rem;
+  color: #374151;
+  user-select: none;
+  font-weight: 400;
+}
+
+.pr-checkbox-item:hover {
+  background-color: #f3f4f6;
+}
+
+.pr-checkbox-item input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  accent-color: #295EE7;
+  flex-shrink: 0;
+  border-radius: 0.25rem;
+  border: 1px solid #d1d5db;
+}
+
+.pr-checkbox-item input[type="checkbox"]:checked {
+  background-color: #295EE7;
+  border-color: #295EE7;
+}
+
+.pr-checkbox-item span {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+/* ============================================================ */
+/* DROPDOWN EMPTY STATE */
+/* ============================================================ */
+
+.pr-dropdown-empty {
+  padding: 0.75rem 0.75rem;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* ============================================================ */
+/* DROPDOWN LOADING STATE */
+/* ============================================================ */
+
+.pr-dropdown-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border-top: 1px solid #e5e7eb;
+  background-color: #fafafa;
+  color: #6b7280;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.pr-spinner-mini {
+  animation: smoothSpin 1s linear infinite;
+  color: #295EE7;
+}
+
+/* ============================================================ */
+/* INPUT WRAPPER & DATE INPUT */
+/* ============================================================ */
+
+.pr-input-wrapper {
+  position: relative;
+}
+
+.pr-input {
+  width: 100%;
+  padding: 0.5rem 2rem 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  outline: none;
+  box-sizing: border-box;
+  color: #374151;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pr-input::placeholder {
+  color: #9ca3af;
+}
+
+.pr-input:hover {
+  border-color: #9ca3af;
+}
+
+.pr-input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+/* Date Input Specific */
+.pr-date-input-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.pr-date-input {
+  padding-right: 40px !important;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Hide browser's default calendar picker icon */
+.pr-date-input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+/* Calendar Icon */
+.pr-calendar-icon {
+  position: absolute;
+  right: 0.625rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  width: 0.875rem;
+  height: 0.875rem;
+  color: #9ca3af;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+/* Calendar Icon Hover Effect */
+.pr-date-input-wrapper:hover .pr-calendar-icon {
+  color: #4f46e5;
+}
+
+/* ============================================================ */
+/* TEXT SEARCH INPUT FOR PR NUMBER & VENDOR NO */
+/* ============================================================ */
+
+.pr-search-input-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.pr-search-text-input {
+  padding-right: 40px !important;
+  width: 100%;
+}
+
+.pr-search-text-icon {
+  position: absolute;
+  right: 0.625rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  width: 0.875rem;
+  height: 0.875rem;
+  color: #9ca3af;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.pr-search-input-wrapper:hover .pr-search-text-icon {
+  color: #4f46e5;
+}
+
+.pr-search-input-wrapper:focus-within .pr-search-text-icon {
+  color: #295EE7;
+}
+
+/* ============================================================ */
+/* BUTTON GROUP */
+/* ============================================================ */
+
+.pr-button-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ============================================================ */
+/* FILTER BUTTONS */
+/* ============================================================ */
+
+.pr-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+/* Apply Button */
+.pr-button-apply {
+  background: linear-gradient(135deg, #295EE7 0%, #403CCD 100%);
+  color: #ffffff;
+}
+
+.pr-button-apply:hover:not(:disabled) {
+  background: linear-gradient(135deg, #295EE7 0%, #403CCD 100%);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.pr-button-apply:active {
+  background-color: #4338ca;
+}
+
+.pr-button-apply:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Clear Button */
+.pr-button-clear {
+  background-color: #ffffff;
+  color: #6b7280;
+  border: 1px solid #d1d5db;
+}
+
+.pr-button-clear:hover:not(:disabled) {
+  background-color: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.pr-button-clear:active {
+  background-color: #f3f4f6;
+}
+
+.pr-button-clear:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* ============================================================ */
+/* SPINNER ANIMATION */
+/* ============================================================ */
+
+.pr-spinner {
+  animation: smoothSpin 1s linear infinite;
+}
+
+@keyframes smoothSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================================================ */
+/* OLD TABLE SECTION CSS */
+/* ============================================================ */
+
+.sm-pr-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.sm-pr-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+}
+
+.sm-pr-table-head {
+  background-color: #f3f4f6;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.sm-pr-table-header {
+  padding: 1rem 2rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #374151;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  white-space: nowrap;
+}
+
+.sm-pr-table-body {
+  background-color: #ffffff;
+}
+
+.sm-pr-table-row {
+  border-bottom: 1px solid #e5e7eb;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.sm-pr-table-row:hover {
+  background-color: #f9fafb;
+}
+
+.sm-pr-table-row-expanded {
+  background-color: #f9fafb;
+}
+
+.sm-pr-table-cell {
+  padding: 1rem 2rem;
+  font-size: 0.875rem;
+  color: #1f2937;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sm-pr-table-cell-edit,
+.sm-pr-table-cell-action {
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.sm-pr-edit-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 1.rem;
+  color: #2563eb;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  border-radius: 0.375rem;
+}
+
+.sm-pr-edit-btn:hover {
+  background-color: #f3f4f6;
+  transform: scale(1.1);
+}
+
+.sm-pr-action-btn {
+  padding: 0.5rem 1rem;
+  background-color: #7c3aed;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.sm-pr-action-btn:hover {
+  background-color: #6d28d9;
+  border-color: #9ca3af;
+}
+
+.sm-pr-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5rem;
+}
+
+.sm-pr-pagination-info {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.sm-pr-pagination-controls {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.sm-pr-pagination-btn {
+  padding: 0.5rem 1rem;
+  background-color: #e5e7eb;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sm-pr-pagination-btn:hover:not(:disabled) {
+  background-color: #d1d5db;
+}
+
+.sm-pr-pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ============================================================ */
+/* RESPONSIVE DESIGN */
+/* ============================================================ */
+
+@media (max-width: 1200px) {
+  .pr-grid-row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .sm-pr-container {
+    padding: 1rem 0.75rem;
+    overflow-x: hidden;
+  }
+  @media (max-width: 768px) {
+     .pr-grid-row,
+  .pr-grid-row-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .sm-pr-action-bar {
+    flex-direction: row !important;
+
+    gap: 0.75rem;
+  }
+
+  .sm-pr-btn {
+    width: 100%;
+  }
+
+}
+@media (max-width: 768px) {
+  .sm-pr-filters-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}
+
+
+  .sm-pr-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .sm-pr-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .pr-label {
+    font-size: 0.65rem;
+  }
+
+  .pr-dropdown-toggle {
+    font-size: 0.7rem;
+    padding: 0.45rem 0.6rem;
+  }
+
+  .pr-button {
+    padding: 0.45rem 0.8rem;
+    font-size: 0.7rem;
+  }
+}

@@ -1,0 +1,115 @@
+/* BackButton.css */
+.back-button-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding-block: 0.5rem;
+  padding-left: 1.5%;
+  box-sizing: border-box;
+}
+
+.CD-back-button {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.back-button-wrapper {
+  margin-top: 1rem;
+  padding-left: 1.5%;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+}
+
+.CD-add-icon {
+  font-size: 0.8rem;
+}
+
+
+@media (max-width: 767px) {
+
+  .header-wrap {
+    gap: 6px;
+  }
+
+  .page-title {
+    font-size: 1.1rem;
+  }
+
+  .CD-back-button {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 20rem) {
+  .back-button-container {
+    padding-left: 11.5%;
+  }
+}
+
+@media (min-width: 22.5rem) {
+
+  /* 360px */
+  .back-button-container {
+    padding-left: 9%;
+  }
+}
+
+@media (min-width: 25rem) {
+
+  /* 400px */
+  .back-button-container {
+    padding-left: 9.2%;
+  }
+}
+
+@media (min-width: 30rem) {
+
+  /* 480px */
+  .back-button-container {
+    padding-left: 7.15%;
+  }
+}
+
+@media (min-width: 36rem) {
+
+  /* 576px */
+  .back-button-container {
+    padding-left: 5.18%;
+  }
+}
+
+
+@media (min-width: 48rem) {
+
+  /* 768px */
+  .back-button-container {
+    padding-left: 4.9%;
+  }
+}
+
+@media (min-width: 64rem) {
+
+  /* 1024px */
+  .back-button-container {
+    padding-left: 3.9%;
+  }
+}
+
+@media (min-width: 75rem) {
+
+  /* 1200px */
+  .back-button-container {
+    padding-left: 2.9%;
+  }
+}

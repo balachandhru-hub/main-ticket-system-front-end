@@ -1,0 +1,494 @@
+/* File: src/styles/PulseReportInvoiceDashboard.css */
+
+/* ==================== CONTAINER & LAYOUT ==================== */
+
+.im-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #e8e8e8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.im-header {
+  background-color: transparent;
+  padding: 1.5rem 2.5rem;
+  text-align: center;
+}
+
+.im-header-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 0;
+  color: #333;
+}
+
+/* ==================== STATUS CARDS ==================== */
+
+.im-status-cards {
+  display: flex;
+  gap: 0.9375rem;
+  padding: 1.875rem 2.5rem;
+  flex-wrap: wrap;
+}
+
+.im-status-card {
+  background-color: #3d5566;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  flex: 1;
+  min-width: 8rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  user-select: none;
+}
+
+.im-status-card:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.im-status-card-active {
+  background-color: #007bff;
+}
+
+/* ==================== FILTERS SECTION ==================== */
+
+.im-filters-container {
+  background-color: white;
+  margin: 0 2.5rem 1.875rem 2.5rem;
+  padding: 1.5625rem 1.875rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.1);
+}
+
+.im-filters-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+  color: #333;
+}
+
+.im-filter-icon {
+  width: 1.125rem;
+  height: 1.125rem;
+  color: #333;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.im-filters-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.im-filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.im-filter-label {
+  font-size: 0.8125rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.im-date-input {
+  flex: 1;
+  padding: 0.625rem 0.75rem;
+  border: 0.0625rem solid #ddd;
+  border-radius: 0.25rem;
+  font-size: 0.8125rem;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.im-date-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.im-date-filters {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.25rem;
+}
+
+.im-date-range {
+  display: flex;
+  gap: 0.625rem;
+}
+
+.im-clear-filters-btn {
+  padding: 0.625rem 1.5rem;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 0.8125rem;
+  color: #333;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.im-clear-filters-btn:hover {
+  background-color: #d0d0d0;
+}
+
+/* ==================== TABLE SECTION ==================== */
+
+.im-table-container {
+  margin: 0 2.5rem 1.25rem 2.5rem;
+  background-color: white;
+  border-radius: 0.375rem;
+  overflow: hidden;
+  box-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.1);
+}
+
+.im-table-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;  
+  width: 100%;
+}
+
+/* Nice looking + working scrollbar */
+.im-table-wrapper::-webkit-scrollbar {
+  height: 12px;
+}
+.im-table-wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 6px;
+}
+.im-table-wrapper::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+.im-table-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.im-table {
+  width: max-content !important;   /* ← THIS FIXES THE ARROWS */
+  min-width: 100%;
+  table-layout: auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.8125rem;
+}
+
+.im-table-header-row {
+  background-color: #3d4f5c;
+  border: 1px solid #d0d0d0;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.im-table-header {
+  padding: 1rem 0.75rem;
+  text-align: left;
+  font-weight: 500;
+  font-size: 0.8125rem;
+  white-space: nowrap;
+  color: white;
+  border: 1px solid #d0d0d0;
+}
+
+.im-table-row {
+  background-color: white;
+  transition: background-color 0.2s;
+}
+
+.im-table-row:hover {
+  background-color: #f5f5f5;
+}
+
+.im-table-cell {
+  padding: 1rem 0.75rem;
+  border-bottom: 0.0625rem solid #e0e0e0;
+  color: #333;
+  vertical-align: top;
+}
+
+.im-status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: #f0f0f0;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  color: #333;
+  font-weight: 500;
+  border: 1px solid #ddd;
+}
+
+/* ==================== PAGINATION ==================== */
+
+.im-pagination-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  background-color: white;
+  margin: 0 2.5rem 0 2.5rem;
+  border-radius: 0.375rem 0.375rem 0 0;
+  box-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.1);
+  color: #666;
+  font-size: 0.875rem;
+}
+
+.im-pagination-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  background-color: white;
+  margin: 0 2.5rem 1.25rem 2.5rem;
+  border-radius: 0 0 0.375rem 0.375rem;
+  box-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.1);
+  color: #666;
+  font-size: 0.875rem;
+}
+
+.im-pagination-btn {
+  padding: 0.5rem 1.25rem;
+  background-color: white;
+  border: 0.0625rem solid #ddd;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.im-pagination-btn:hover:not(:disabled) {
+  background-color: #f5f5f5;
+}
+
+.im-pagination-btn:disabled {
+  color: #999;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.im-pagination-btn-disabled {
+  color: #999;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.im-pagination-info {
+  color: #666;
+  font-weight: 500;
+}
+
+/* ==================== LOADING & ERROR STATES ==================== */
+
+.im-loader-text {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-size: 0.875rem;
+}
+
+.im-error-text {
+  text-align: center;
+  padding: 20px;
+  color: #d32f2f;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+@media (max-width: 1200px) {
+  .im-filters-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .im-status-cards {
+    padding: 1.5rem 1.5rem;
+  }
+
+  .im-filters-container,
+  .im-table-container,
+  .im-pagination-top,
+  .im-pagination-bottom {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .im-filters-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .im-status-cards {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 1rem;
+  }
+
+  .im-status-card {
+    flex: unset;
+    width: 100%;
+  }
+
+  .im-filters-container,
+  .im-table-container,
+  .im-pagination-top,
+  .im-pagination-bottom {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .im-header {
+    padding: 1rem 1rem;
+  }
+
+  .im-filters-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .im-date-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .im-date-range {
+    flex-direction: column;
+  }
+
+  .im-pagination-top,
+  .im-pagination-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .im-pagination-info {
+    order: -1;
+  }
+
+  .im-table-wrapper {
+    max-height: 50vh;
+  }
+
+  .im-table {
+    font-size: 0.75rem;
+  }
+
+  .im-table-header,
+  .im-table-cell {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .im-status-cards {
+    gap: 0.25rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .im-status-card {
+    font-size: 0.65rem;
+    padding: 0.5rem 1rem;
+    min-width: 6rem;
+  }
+
+  .im-filters-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .im-date-range {
+    flex-direction: column;
+  }
+
+  .im-filters-container,
+  .im-table-container,
+  .im-pagination-top,
+  .im-pagination-bottom {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .im-table-header,
+  .im-table-cell {
+    padding: 0.5rem 0.375rem;
+    font-size: 0.7rem;
+  }
+
+  .im-pagination-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .im-pagination-info {
+    font-size: 0.75rem;
+  }
+}
+
+/* ==================== UTILITIES ==================== */
+
+.im-text-center {
+  text-align: center;
+}
+
+.im-hidden {
+  display: none;
+}
+
+.im-loader-inline {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #444;
+}
+
+.im-inline-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.im-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ccc;
+  border-top: 2px solid #007bff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Force real horizontal scroll – very important */
+.im-table th,
+.im-table td {
+  white-space: nowrap;       /* no text wrap */
+  min-width: 120px;          /* columns can't shrink too much */
+  box-sizing: border-box;
+}

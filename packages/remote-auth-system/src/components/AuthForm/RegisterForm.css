@@ -1,0 +1,101 @@
+.rs-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f7f9fc;
+  min-height: 100vh;
+}
+
+.rs-box {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 800px;
+}
+
+.rs-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #1a1a1a;
+}
+
+.rs-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.rs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.rs-form-group {
+  position: relative;
+}
+
+.rs-input {
+  width: 90%;
+  padding: 18px 12px 6px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fefefe;
+  transition: border 0.3s;
+}
+
+.rs-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.rs-label {
+  position: absolute;
+  top: 14px;
+  left: 12px;
+  background-color: white;
+  padding: 0 4px;
+  color: #666;
+  font-size: 1rem;
+  transition: 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+.rs-input:focus ~ .rs-label,
+.rs-input:not(:placeholder-shown) ~ .rs-label {
+  top: -9px;
+  left: 10px;
+  font-size: 0.75rem;
+  color: #007bff;
+}
+
+.rs-button {
+  background-color: #007bff;
+  color: white;
+  width: 100%;
+  margin: auto;
+  padding: 14px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+
+
+.rs-button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .rs-box {
+    padding: 25px;
+  }
+}

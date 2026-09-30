@@ -1,0 +1,489 @@
+.view-btn-container {
+  position: relative;
+  display: inline-block;
+}
+
+.view-btn-dropdown {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  width: 160px;
+  z-index: 1000;
+}
+
+.view-btn-item {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.view-btn-item:hover {
+  background-color: #f0f0f0;
+}
+
+.view-btn-loading,
+.view-btn-empty {
+  padding: 8px 12px;
+  color: #777;
+}
+
+.vb-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.vb-popup-content {
+  position: relative; 
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 840px;
+  height: 53vh;
+  overflow-y: auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.vb-header{
+  text-align: center;
+}
+
+.vb-result-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.vb-result-table th,
+.vb-result-table td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.vb-result-table th {
+  background: #f5f5f5;
+}
+
+.vb-popup-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  cursor: pointer;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vb-dropdown-section {
+  margin-bottom: 20px;
+  padding: 15px;
+  width: 12rem;
+}
+
+.vb-dropdown-section label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+.vb-dropdown-container {
+  position: relative;
+  width: 100%;
+}
+
+.vb-dropdown-btn {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.vb-dropdown-btn:hover {
+  border-color: #007bff;
+}
+
+.vb-dropdown-btn:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.dropdown-arrow {
+  transition: transform 0.2s ease;
+}
+
+.vb-dropdown-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.vb-dropdown-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s ease;
+}
+
+.vb-dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+.vb-dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.vb-loading, .vb-empty {
+  padding: 8px 12px;
+  text-align: center;
+  color: #777;
+}
+
+/* Results section */
+.vb-results-section {
+  margin-top: 20px;
+}
+
+.vb-results-section p {
+  text-align: center;
+  color: #666;
+  padding: 20px;
+}
+
+.vb-pagination-controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 1rem;
+    width: 100%;
+    padding: .75rem;
+    border-radius: 0 0 8px 8px;
+    gap: 0.5rem;
+}
+
+.vb-pagination-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  background-color: #ffffff;
+  color: #374151;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  min-width: 80px;
+}
+
+.vb-pagination-btn:hover:not(:disabled) {
+  background-color: #f3f4f6;
+  border-color: #9ca3af;
+  transform: translateY(-1px);
+}
+
+.vb-pagination-btn:active:not(:disabled) {
+  transform: translateY(0);
+  background-color: #e5e7eb;
+}
+
+.vb-pagination-btn:disabled {
+  background-color: #f3f4f6;
+  color: #9ca3af;
+  border-color: #e5e7eb;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.vb-prev-btn:not(:disabled) {
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+.vb-prev-btn:hover:not(:disabled) {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.vb-next-btn:not(:disabled) {
+  border-color: #10b981;
+  color: #10b981;
+}
+
+.vb-next-btn:hover:not(:disabled) {
+  background-color: #10b981;
+  color: white;
+}
+
+.vb-pagination-info {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+  text-align: center;
+  flex: 1;
+  margin: 0 1rem;
+}
+
+.vb-loading-more {
+  padding: 0.75rem;
+  text-align: center;
+  color: #6b7280;
+  font-style: italic;
+  font-size: 0.875rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.vb-no-more-data {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 0.875rem;
+  font-style: italic;
+  border-top: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+}
+
+.vb-dropdown-options {
+  max-height: 200px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f1f5f9;
+}
+
+.vb-dropdown-options::-webkit-scrollbar {
+  width: 6px;
+}
+
+.vb-dropdown-options::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 3px;
+}
+
+.vb-dropdown-options::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.vb-dropdown-options::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+.vb-search-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: .7rem;
+  justify-content: flex-start;
+}
+
+.vb-control-row {
+    display: flex;
+    align-items: flex-end; 
+    gap: 15px; 
+    flex-wrap: nowrap; 
+    padding-top: 1rem;
+}
+
+.date-time-control {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
+}
+
+.date-time-inputs {
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+    white-space: nowrap; 
+}
+
+.vb-date-input {
+    width: 125px;
+    height: 38px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.vb-control-row {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.vb-control-row.vb-first-row {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-end; 
+}
+
+.vb-control-row.vb-second-row {
+    width: 100%; 
+    display: flex;
+    justify-content: flex-end; 
+    border-bottom: 1px solid #eee; 
+}
+
+.vb-search-and-download {
+    display: flex;
+    align-items: center;
+    width: 50%; 
+    min-width: 400px; 
+}
+
+.vb-search-input {
+    flex-grow: 1; 
+    margin-right: 10px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.vb-search-btn {
+    padding: 8px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    height: 38px; 
+}
+
+.vb-search-btn:hover {
+    background-color: #0056b3;
+}
+.time-input {
+    width: 45px;
+    height: 38px;
+    padding: 0 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.vb-download-btn {
+    height: 38px;
+    align-self: flex-end; 
+    padding: 0 15px;
+    margin-bottom: 2px; 
+    background-color: #28a745; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.vb-dropdown-section {
+    width: 12rem;
+    padding: 0; 
+    margin-bottom: 0;
+    align-self: flex-end; 
+}
+
+@media (max-width: 900px) {
+    .vb-control-row {
+        flex-wrap: wrap; 
+        row-gap: 15px;
+    }
+}
+
+.vb-search-input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.vb-search-input:focus {
+  border-color: #1d4ed8;
+  box-shadow: 0 0 0 2px rgba(29, 78, 216, 0.2);
+}
+
+.vb-search-btn {
+  padding: 0.5rem 1rem;
+  background-color: #1d4ed8;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.vb-search-btn:hover {
+  background-color: #2563eb;
+}
+
+.vb-search-btn:active {
+  background-color: #1e40af;
+  transform: translateY(0);
+}
+.vb-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px; 
+}
+
+@media (max-width: 768px) {
+  .vb-pagination-controls {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+  
+  .vb-pagination-info {
+    margin: 0;
+    order: -1;
+  }
+  
+  .vb-pagination-btn {
+    min-width: 100px;
+  }
+  .vb-popup-content {
+    width: 90vw;
+    height: 55vh;
+    margin: 20px;
+  }
+  
+  .vb-dropdown-section {
+    padding: 10px;
+  }
+}

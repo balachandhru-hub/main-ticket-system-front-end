@@ -1,0 +1,421 @@
+.view-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; 
+}
+ .pr-upload-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.pr-upload-box {
+  background: #fff;
+  padding: 22px 28px;
+  border-radius: 10px;
+  width: 360px;
+  text-align: center;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.2);
+}
+/* Confirmation Popup Overlay */
+.scp-confirm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10002;
+}
+
+.scp-confirm-box {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.scp-confirm-box h4 {
+  margin: 0 0 12px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.scp-confirm-box p {
+  margin: 0 0 20px 0;
+  color: #666;
+  line-height: 1.5;
+}
+
+.scp-confirm-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.scp-btn.confirm-ok {
+  background: #28a745;
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.scp-btn.confirm-ok:hover {
+  background: #218838;
+}
+
+.scp-btn.confirm-cancel {
+  background: #dc3545;
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.scp-btn.confirm-cancel:hover {
+  background: #c82333;
+}
+.pr-upload-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 22px;
+}
+.view-popup-content {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+  height: 75vh;
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+ 
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+ 
+.view-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+ 
+.view-popup-header h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  flex: 1;
+}
+ 
+.view-popup-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.2s;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+ 
+.view-popup-close:hover {
+  color: #000;
+}
+ 
+.view-popup-tabs {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+ 
+.view-popup-tab-button {
+  flex: 1;
+  padding: 12px;
+  background: #f0f0f0;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+  text-align: center;
+}
+ 
+.view-popup-tab-button.active {
+  background: #007bff;
+  color: #fff;
+}
+ 
+.view-popup-body {
+  overflow-y: auto;
+  flex: 1;
+  padding-right: 10px;
+}
+ 
+.view-popup-tab-content {
+  display: flex;
+  flex-direction: column;
+}
+ 
+.view-popup-cards-wrapper {
+  display: grid;
+  margin-bottom: 20px;
+}
+ 
+.view-popup-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+ 
+.view-popup-card h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+  border-bottom: 1px solid #007bff;
+  padding-bottom: 5px;
+}
+ 
+.view-popup-detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+ 
+.view-popup-label {
+  font-weight: bold;
+  color: #555;
+}
+ 
+.view-popup-value {
+  color: #333;
+  text-align: right;
+}
+ 
+.view-popup-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+ 
+.view-popup-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+ 
+.view-popup-button.view {
+  background: #007bff;
+  color: #fff;
+}
+ 
+.view-popup-button.download {
+  background: #007bff;
+  color: #fff;
+}
+ 
+.view-popup-button.close {
+  background: #dc3545;
+  color: #fff;
+}
+ 
+.view-popup-button.back {
+  background: #6c757d;
+  color: #fff;
+}
+ 
+.view-popup-button.next {
+  background: #007bff;
+  color: #fff;
+}
+ 
+.view-popup-button:hover:not(:disabled) {
+  opacity: 0.9;
+}
+ 
+.view-popup-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+ 
+.view-popup-attachment {
+  margin-top: 20px;
+  background: #f9f9f9;
+  border-radius: 6px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+ 
+.view-popup-attachment h4 {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
+ 
+.view-popup-attachment pre {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+ 
+.view-popup-history-table {
+  overflow-x: auto;
+}
+ 
+.view-popup-history-table table {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+}
+ 
+.view-popup-history-table th,
+.view-popup-history-table td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+ 
+.view-popup-history-table th {
+  background: #f0f0f0;
+  font-weight: bold;
+}
+ 
+.view-popup-footer {
+  padding: 15px 0 0 0;
+}
+ 
+.view-popup-footer-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.signed-contract-section {
+  margin-top: 30px;
+  padding: 20px;
+  border: 2px dashed #28a745;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.signed-contract-section h3 {
+  margin: 0 0 15px 0;
+  color: #28a745;
+  font-size: 18px;
+}
+
+.upload-signed-wrapper {
+  margin: 15px 0;
+}
+
+.view-popup-button.upload-signed {
+  background: #007bff;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 10px 24px;
+}
+
+.signed-contract-preview {
+  padding-top: 20px;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.file-name {
+  padding-bottom: 10px;
+  font-weight: bold;
+  word-break: break-all;
+}
+
+.signed-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.view-popup-button.small {
+  padding: 6px 14px;
+  font-size: 13px;
+}
+
+.view-popup-button.small.view {
+  background: #10b981;
+  color: white;
+}
+
+.view-popup-button.small.download {
+  background: #10b981;
+  color: white;
+}
+ 
+@media (max-width: 768px) {
+  .view-popup-content {
+    width: 95%;
+    padding: 15px;
+    height: 80vh;
+  }
+ 
+  .view-popup-card-grid {
+    grid-template-columns: 1fr;
+  }
+ 
+  .view-popup-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+ 
+  .view-popup-history-table table {
+    font-size: 12px;
+  }
+ 
+  .view-popup-footer-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+ 

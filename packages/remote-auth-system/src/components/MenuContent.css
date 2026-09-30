@@ -1,0 +1,207 @@
+.menu-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.user-search-input {
+  padding: 0.6rem 1rem;
+  font-size: 0.875rem;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.5rem;
+  width: fit-content;
+  background-color: #fff;
+  outline: none;
+  border: none;
+}
+
+.user-search-input:focus {
+  border-color: #1976d2;
+}
+
+.create-user-button {
+  background-color: #1976d2;
+  color: #ffffff;
+  border: none;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.create-user-button:hover {
+  background-color: #125aa8;
+}
+
+.user-role-section h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.user-table-wrapper {
+  overflow-x: auto;
+  border-radius: 0.5rem;
+  border: 0.0625rem solid #ddd;
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.08);
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.user-table th,
+.user-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: 0.875rem;
+  color: #333;
+}
+
+.user-table th {
+  background-color: #f0f0f0;
+  font-weight: 600;
+}
+
+.user-table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.user-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.search-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.search-container {
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.1rem 0.3rem;
+}
+
+.menu-cell:hover {
+  background-color: #1976d2;
+}
+
+.cell-image {
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: contain;
+  position: absolute;
+  transition: opacity 0.3s ease;
+}
+
+.default-img {
+  opacity: 1;
+}
+
+.hover-img {
+  opacity: 0;
+}
+
+.menu-cell:hover .default-img {
+  opacity: 0;
+}
+
+.menu-cell:hover .hover-img {
+  opacity: 1;
+}
+
+.cell-label {
+  font-size: 1.1rem;
+  line-height: 1;
+  display: block;
+  padding: 0;
+  color: #333;
+  padding-top: 4.2rem;
+  text-align: center;
+}
+
+.menu-cell:hover .cell-label {
+  color: #ffffff;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+  padding: 1rem 2.5rem;
+}
+
+.menu-cell {
+  background-color: #fff;
+  border: .1rem solid #e0e0e0;
+  border-radius: 0.5rem;
+  flex: 1 1 20rem;
+  max-width: 80rem;
+  height: 18rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.08);
+  text-align: center;
+  position: relative;
+}
+
+@media (max-width: 64rem) {
+  .menu-header {
+    justify-content: space-evenly;
+    gap: 1.5rem;
+    padding: 1rem 2.5rem;
+  }
+
+  .menu-cell {
+    flex: 1 1 18rem;
+    max-width: 40rem;
+    height: 18rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  .menu-header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 2.5rem;
+  }
+
+  .menu-cell {
+    width: 100%;
+    max-width: 40rem;
+    height: 13rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .menu-header {
+    gap: 0.75rem;
+    padding: 1rem 2.5rem;
+  }
+
+  .menu-cell {
+    width: 100%;
+    max-width: 40rem;
+    height: 12rem;
+  }
+}

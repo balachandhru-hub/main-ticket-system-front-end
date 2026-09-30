@@ -1,0 +1,435 @@
+/* ═══════════════════════════════════════════════
+   SAP ARIBA — PrSummary.css
+   Uses same token variables as PrEntertainment.css
+   ═══════════════════════════════════════════════ */
+
+/* ── PAGE WRAPPER ─────────────────────────────── */
+.pr-summary-wrapper {
+  font-family: 'IBM Plex Sans','Helvetica Neue',Arial,sans-serif;
+  font-size: 13px;
+  color: #1A1A1A;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── HEADER BAR ───────────────────────────────── */
+.pr-summary-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 16px;
+  background: #fff;
+  border-bottom: 1px solid #D3D3D3;
+  min-height: 42px;
+  margin: 0;
+}
+
+.pr-summary-header__left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.pr-summary-header__title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1A1A1A;
+  background: none;
+  -webkit-text-fill-color: unset;
+  margin: 0;
+}
+
+/* ── SEARCH (reuses .draft-search from PrEntertainment.css) ─── */
+.draft-search {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.draft-search input {
+  font-family: 'IBM Plex Sans','Helvetica Neue',Arial,sans-serif;
+  font-size: 12px;
+  height: 28px;
+  padding: 0 30px 0 8px;
+  border: 1px solid #ABABAB;
+  border-radius: 2px;
+  color: #1A1A1A;
+  background: #fff;
+  outline: none;
+  width: 200px;
+  transition: border-color .12s, box-shadow .12s;
+}
+
+.draft-search input:focus {
+  border-color: #0064D2;
+  box-shadow: 0 0 0 2px rgba(0,100,210,.14);
+}
+
+.draft-search input::placeholder { color: #ABABAB; }
+
+.draft-search-icon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #0064D2;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* ── TABLE WRAPPER ────────────────────────────── */
+.summary-content {
+  padding: 12px 14px;
+}
+
+/* reuse .draft-table-wrapper from PrEntertainment */
+.summary-content .draft-table-wrapper {
+  margin: 0;
+  border: 1px solid #D3D3D3;
+  border-radius: 2px;
+  background: #fff;
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: calc(100vh - 130px);
+}
+
+/* ── TABLE ────────────────────────────────────── */
+.summary-content .line-items-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  background: #fff;
+  table-layout: fixed;
+}
+
+.summary-content .line-items-table thead {
+  background: #F5F7FA;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.summary-content .line-items-table th {
+  padding: 7px 10px;
+  text-align: center;
+  font-weight: 600;
+  color: #1A1A1A;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  white-space: nowrap;
+  background: #F5F7FA;
+  border-bottom: 2px solid #D3D3D3;
+  overflow: hidden;
+  text-align: center;
+}
+
+.summary-content .line-items-table td {
+  padding: 7px 10px;
+  border-bottom: 1px solid #EFEFEF;
+  color: #4D4D4D;
+  font-size: 12px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* Column 1: PR Number */
+.summary-content .line-items-table td:nth-child(1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* Column 2: Line No. */
+.summary-content .line-items-table td:nth-child(2) {
+  overflow: visible;
+  white-space: normal;
+  text-align: center;
+}
+
+/* Column 3: Status Badge */
+.summary-content .line-items-table td:nth-child(3) {
+  overflow: visible;
+  text-overflow: clip;
+  white-space: normal;
+  padding: 7px 10px;
+}
+
+/* Column 4: PO Number */
+.summary-content .line-items-table td:nth-child(4) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* Column 5: Receipt/SS ID */
+.summary-content .line-items-table td:nth-child(5) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Column 6: Invoice ID */
+.summary-content .line-items-table td:nth-child(6) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* Column 7: Description */
+.summary-content .line-items-table td:nth-child(7) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 150px;
+}
+
+/* Column 8: Qty */
+.summary-content .line-items-table td:nth-child(8) {
+  overflow: visible;
+  white-space: normal;
+  text-align: center;
+}
+
+/* Column 9: Need By  */
+.summary-content .line-items-table td:nth-child(9) {
+  overflow: visible;
+  white-space: normal;
+}
+
+/* Column 10: Amount */
+.summary-content .line-items-table td:nth-child(10) {
+  overflow: visible;
+  white-space: normal;
+  text-align: center;
+}
+
+/* Column 11: Actions  */
+.summary-content .line-items-table td:nth-child(11) {
+  overflow: visible;
+  white-space: normal;
+}
+
+/* Column 12: Expand/Collapse button*/
+.summary-content .line-items-table td:nth-child(12) {
+  overflow: visible;
+  white-space: normal;
+}
+
+/* ── ROW STYLING ──────────────────────────────── */
+.summary-content .line-items-table tbody tr {
+  transition: background .1s;
+}
+
+.summary-content .line-items-table tbody tr:hover {
+  background: #F0F7FF;
+}
+
+.summary-content .line-items-table tbody tr.active-row {
+  background: #EAF3FF;
+}
+
+.summary-content .line-items-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Sub-rows */
+.summary-content .line-items-table tbody tr.sub-row {
+  background: #F7F7F7;
+}
+
+.summary-content .line-items-table tbody tr.sub-row td {
+  color: #6D6D6D;
+  font-size: 12px;
+}
+
+/* ── BADGES ───────────────────────────────────── */
+.badge {
+  display: inline-block;
+  padding: 2px 7px;
+  border-radius: 2px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.badge-success {
+  background: #F0FAF0;
+  color: #1A6E1A;
+}
+
+.badge-pending {
+  background: #FEF7EC;
+  color: #7A4500;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 2px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+  white-space: nowrap;     
+  overflow: visible;        
+  text-overflow: clip;      
+  min-width: auto;          
+}
+
+.status-badge.active   { 
+  background: #F0FAF0; 
+  color: #1A6E1A; 
+}
+
+.status-badge.inactive { 
+  background: #FFF0F0; 
+  color: #BB0000; 
+}
+
+.status-badge.pending  { 
+  background: #FEF7EC; 
+  color: #7A4500; 
+}
+
+.status-badge.approved { 
+  background: #F0FAF0; 
+  color: #1A6E1A; 
+}
+
+/* count pill */
+.count-pill {
+  display: inline-block;
+  padding: 2px 7px;
+  background: #EAF3FF;
+  color: #0064D2;
+  border-radius: 2px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ── ACTION BUTTONS ───────────────────────────── */
+.summary-content .btn-icon-sm {
+  background: none;
+  border: 1px solid #D3D3D3;
+  border-radius: 2px;
+  cursor: pointer;
+  color: #8C8C8C;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  padding: 3px;
+  transition: background .12s, color .12s, border-color .12s;
+}
+
+.summary-content .btn-icon-sm:hover {
+  background: #EAF3FF;
+  color: #0064D2;
+  border-color: #0064D2;
+}
+
+/* edit/copy icon buttons */
+.summary-content .btn-icon.btn-edit-sm {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #0064D2;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  opacity: .8;
+  transition: opacity .12s;
+}
+
+.summary-content .btn-icon.btn-edit-sm:hover { 
+  opacity: 1; 
+}
+
+/* ── LOADER ───────────────────────────────────── */
+.draft-loader {
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #fff;
+}
+
+.loading-text {
+  color: #0064D2;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.loading-text::after {
+  content: "...";
+  display: inline-block;
+  width: 1.2em;
+  text-align: left;
+  animation: dots 1.6s steps(4,end) infinite;
+}
+
+@keyframes dots {
+  0%,20%  { content: "."; }
+  40%     { content: ".."; }
+  60%     { content: "..."; }
+  80%,100%{ content: "...."; }
+}
+
+.no-items-message {
+  text-align: center;
+  color: #ABABAB;
+  font-style: italic;
+  padding: 24px 0;
+  font-size: 12px;
+}
+
+/* end-of-list message */
+.end-of-list {
+  padding: 12px;
+  text-align: center;
+  color: #8C8C8C;
+  font-size: 12px;
+  background: #fff;
+  border-top: 1px solid #EFEFEF;
+}
+
+/* ── RESPONSIVE ───────────────────────────────── */
+@media (max-width: 768px) {
+  .summary-content { 
+    padding: 8px; 
+  }
+  
+  .summary-content .line-items-table {
+    min-width: 1000px;
+  }
+  
+  .summary-content .line-items-table th,
+  .summary-content .line-items-table td { 
+    padding: 5px 7px; 
+    font-size: 11px; 
+  }
+  
+  .draft-search input { 
+    width: 150px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .pr-summary-header { 
+    padding: 6px 10px; 
+    flex-wrap: wrap; 
+  }
+  
+  .draft-search input { 
+    width: 120px; 
+  }
+}

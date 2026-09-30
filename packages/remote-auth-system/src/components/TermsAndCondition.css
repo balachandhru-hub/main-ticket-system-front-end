@@ -1,0 +1,95 @@
+/* src/components/TermsAndCondition.css */
+
+.terms-container {
+  padding: 1.5rem 2rem;
+  background-color: white;
+  border-radius: 12px;
+  position: relative;
+}
+
+.terms-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.terms-header h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+.terms-body {
+  padding-right: 0.5rem;
+}
+
+.terms-list {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+  counter-reset: section;
+}
+
+.terms-list li {
+  margin-bottom: 1.2rem;
+}
+
+.terms-list strong {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.terms-list p {
+  margin: 0.3rem 0 0.8rem 0;
+  line-height: 1.5;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.terms-list ul {
+  padding-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.terms-list ul li {
+  list-style-type: disc;
+  font-size: 0.93rem;
+  line-height: 1.4;
+  margin-bottom: 0.4rem;
+  color: #333;
+}
+
+.terms-footer {
+  text-align: right;
+  padding: .7rem;
+}
+
+.accept-btn {
+  background-color: #2563eb;
+  color: #fff;
+  padding: 0.55rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.accept-btn:hover {
+  background-color: #1e4ed8;
+}

@@ -1,0 +1,67 @@
+.nav-tabs-fixed {
+    display: flex;
+    gap: 1rem;
+    padding: 0.3em;
+    background: #f8f9fb;
+    border-radius: 8px;
+    height: 47px;
+    width: auto;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    outline: none;
+    flex-wrap: wrap;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: transparent;
+  border: none;
+  color: #555;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  height: 35px;
+  outline: none;
+  white-space: nowrap; 
+}
+
+.tab:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.tab.active {
+  background: white;
+  box-shadow: 0 0 0 1px #e0e0e0;
+  font-weight: 600;
+  color: black;
+  outline: none;
+  border: none;
+}
+
+.tab::-moz-focus-inner {
+  border: 0;
+}
+
+
+@media (max-width: 768px) {
+  .nav-tabs-fixed {
+    width: 100%;
+    justify-content: flex-start;
+    height: auto;
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .tab {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    height: auto;
+  }
+}

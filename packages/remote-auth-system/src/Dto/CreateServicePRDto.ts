@@ -1,0 +1,66 @@
+export interface ServiceLineItemDto {
+    numberInCollection: number;
+    originatingSystemLineNumber?: number;
+    quantity: number;
+    deliveryDate: string;
+    billingAddress?: string;
+    shipToPlant?: string;
+    deliverTo?: string;
+    commodityCode: string;
+    commodityDomain?: string;
+    description: string;
+    conversionFactor?: number;
+    amount: number;
+    currency?: string;
+    priceBasisQuantityDesc?: string;
+    priceBasisQuantityUOM?: string;
+    uom?: string;
+    purchaseOrg: string;
+    purchaseGroup: string;
+    costCenter: string;
+    glAccount?: string;
+    expectedAmount?: number;
+    maxAmount?: number;
+    importedItemCategoryStaging?: string;
+    type?: string;
+    importedAccountCategoryStaging?: string;
+    needBy: string;
+    companyCode: string;
+    isServiceChild: boolean;
+    serviceStartDate: string;
+    serviceEndDate: string;
+    vendor: string;
+    contract: string;
+    materialCode?: string;
+    taxCode?: string;
+}
+
+export interface ServicePRDto {
+    domainId?: string;
+    userId?: string;
+    prNumber?: string;
+    prServiceUniqueName?: string;
+    server?: string;
+    variant?: string;
+    partition?: string;
+    operation?: string;
+    originatingSystem?: string;
+    originatingSystemReferenceID?: string;
+    uniqueName?: string;
+    name?: string;
+    title: string;
+    preparer?: string;
+    passwordAdapter?: string;
+    aribaUserName?: string;
+    companyCode: string;
+    deliverTo?: string;
+    needBy: string;
+    importedHeaderCommentStaging?: string;
+    importedHeaderExternalCommentStaging?: boolean;
+    aribaEndPoint?: string;
+    username?: string;
+    password?: string;
+    servicePartition?: string;
+    serviceVariant?: string;
+    lineItems: ServiceLineItemDto[];
+}

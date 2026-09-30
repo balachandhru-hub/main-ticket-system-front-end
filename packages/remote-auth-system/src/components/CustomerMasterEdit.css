@@ -1,0 +1,201 @@
+body.customer-master-edit-page-bg {
+  background-color: #ffffff;
+}
+
+.customer-master-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.customer-master-inner {
+  width: 100%;
+  max-width: 50rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.main-heading {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+
+.section-title {
+  font-size: 1.0625rem;
+  font-weight: 600;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 12rem;
+}
+
+
+.input-group label {
+  padding-bottom: 0.5rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+.input-group input,
+.input-group select {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.375rem;
+  width: 100%;
+  height: 2.5rem;
+  box-sizing: border-box;
+}
+
+.input-group.short {
+  max-width: 18rem;
+}
+
+.reset-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.update-btn {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.625rem 1.75rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+.button-view {
+padding-left: 2.6rem !important;
+padding-top: 1.5rem !important;
+}
+
+.bd-role-group {
+  position: relative;        /* REQUIRED for absolute dropdown */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.bd-role-label {
+  font-weight: 500;
+  padding-bottom: 0.3rem;
+}
+
+.bd-role-select {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.375rem;
+  height: 2.5rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  background: white;
+  cursor: pointer;
+  width: 100%;
+  user-select: none;
+}
+
+.bd-bot-model-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  max-height: 300px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  z-index: 1000;
+  padding: 8px 0;
+}
+
+/* Each checkbox row */
+.bd-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 0.5rem;
+  border-radius: 0.375rem;
+}
+
+.bd-dropdown-item:hover {
+  background: #f2f2f2;
+}
+
+/* Make checkboxes cleaner */
+.bd-dropdown-item input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+}
+
+.section-box {
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: visible !important;  
+}
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .input-group,
+  .input-group.short {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .section-box {
+    padding: 1rem;
+  }
+
+  .customer-master-inner {
+    padding: 1rem;
+  }
+
+  .button-row {
+    padding: 15rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+    .button-view {
+        padding-left: 2.0rem;
+        padding-top: 1.5rem ;
+    }
+}

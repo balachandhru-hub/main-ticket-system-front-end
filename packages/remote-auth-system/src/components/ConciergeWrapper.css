@@ -1,0 +1,52 @@
+/* ── ConciergeWrapper.css ─────────────────────────────────────── */
+
+.concierge-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.concierge-mode-toggle-bar {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 16px 0;
+    background: var(--bg-surface, #ffffff);
+    border-bottom: 1px solid var(--border-color, #e5e7eb);
+}
+
+.mode-toggle-btn {
+    position: relative;
+    padding: 7px 28px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary, #6b7280);
+    cursor: pointer;
+    border-radius: 4px 4px 0 0;
+    transition: color 0.18s, background 0.18s;
+    outline: none;
+}
+
+.mode-toggle-btn:hover:not(.mode-toggle-btn--active) {
+    background: var(--bg-hover, #f3f4f6);
+    color: var(--text-primary, #111827);
+}
+
+.mode-toggle-btn--active {
+    color: var(--primary, #0064D2);
+    background: transparent;
+    font-weight: 600;
+}
+
+.mode-toggle-btn--active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--primary, #0064D2);
+    border-radius: 2px 2px 0 0;
+}
